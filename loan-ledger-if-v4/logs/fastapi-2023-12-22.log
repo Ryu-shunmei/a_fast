@@ -1,0 +1,3916 @@
+2023-12-22 18:10:00.568 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-22 18:10:11.286 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-22 18:10:11.388 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-22 18:10:11.389 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-22 18:10:11.390 | INFO     | uvicorn.server:serve:86 - Finished server process [77823]
+2023-12-22 18:10:11.772 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-22 18:10:43.514 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-22 18:10:43.616 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-22 18:10:43.617 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-22 18:10:43.617 | INFO     | uvicorn.server:serve:86 - Finished server process [77834]
+2023-12-22 18:10:43.996 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-22 18:30:31.153 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55181 - "OPTIONS /org_types HTTP/1.1" 200
+2023-12-22 18:30:31.154 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55182 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 18:30:31.154 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55183 - "OPTIONS /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 18:30:31.154 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55184 - "OPTIONS /org_types HTTP/1.1" 200
+2023-12-22 18:30:31.156 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55185 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 18:30:31.158 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55186 - "OPTIONS /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 18:30:31.175 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 18:30:31.182 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 18:30:31.184 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55181 - "GET /org_types HTTP/1.1" 200
+2023-12-22 18:30:31.184 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 18:30:31.191 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55183 - "GET /role_types HTTP/1.1" 200
+2023-12-22 18:30:31.196 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 18:30:31.199 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 18:30:31.199 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 18:30:31.199 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55181 - "GET /org_types HTTP/1.1" 200
+2023-12-22 18:30:31.201 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55183 - "GET /role_types HTTP/1.1" 200
+2023-12-22 18:30:31.202 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 18:30:31.204 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 18:30:31.205 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 18:30:31.206 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 18:30:31.206 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 18:30:31.207 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 18:30:31.208 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 18:30:31.209 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55184 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 18:30:31.216 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 18:30:31.217 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 18:30:31.220 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 18:30:31.221 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 18:30:31.222 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 18:30:31.222 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 18:30:31.223 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 18:30:31.224 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 18:30:31.224 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 18:30:31.225 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55184 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 18:31:40.114 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 18:31:40.116 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 18:31:40.118 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55476 - "GET /org_types HTTP/1.1" 200
+2023-12-22 18:31:40.119 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55475 - "GET /role_types HTTP/1.1" 200
+2023-12-22 18:31:40.129 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 18:31:40.134 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 18:31:40.145 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 18:31:40.151 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55476 - "GET /org_types HTTP/1.1" 200
+2023-12-22 18:31:40.153 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 18:31:40.157 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 18:31:40.159 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55475 - "GET /role_types HTTP/1.1" 200
+2023-12-22 18:31:40.160 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 18:31:40.174 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 18:31:40.176 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 18:31:40.177 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55475 - "GET /role_types HTTP/1.1" 200
+2023-12-22 18:31:40.178 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 18:31:40.185 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 18:31:40.187 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 18:31:40.192 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55475 - "GET /role_types HTTP/1.1" 200
+2023-12-22 18:31:40.195 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 18:31:40.197 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 18:31:40.200 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55477 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 18:31:40.214 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 18:31:40.217 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 18:31:40.221 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 18:31:40.226 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 18:31:40.228 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 18:31:40.229 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 18:31:40.231 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 18:31:40.232 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 18:31:40.233 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 18:31:40.234 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55477 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 20:53:54.023 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53073 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 20:53:54.024 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53074 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 20:53:54.032 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 20:53:54.035 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53073 - "GET /role_types HTTP/1.1" 200
+2023-12-22 20:53:54.045 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 20:53:54.047 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53073 - "GET /role_types HTTP/1.1" 200
+2023-12-22 22:55:19.196 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53367 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 22:55:19.197 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53368 - "OPTIONS /org_types HTTP/1.1" 200
+2023-12-22 22:55:19.198 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53367 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 22:55:19.199 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53369 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 22:55:19.199 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53368 - "OPTIONS /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 22:55:19.199 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53370 - "OPTIONS /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 22:55:19.203 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53371 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 22:55:19.207 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53372 - "OPTIONS /org_types HTTP/1.1" 200
+2023-12-22 22:55:19.215 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 22:55:19.215 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 22:55:19.219 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53369 - "GET /org_types HTTP/1.1" 200
+2023-12-22 22:55:19.220 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 22:55:19.226 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53367 - "GET /role_types HTTP/1.1" 200
+2023-12-22 22:55:19.235 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 22:55:19.240 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53369 - "GET /org_types HTTP/1.1" 200
+2023-12-22 22:55:19.243 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 22:55:19.243 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 22:55:19.245 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53367 - "GET /role_types HTTP/1.1" 200
+2023-12-22 22:55:19.245 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 22:55:19.255 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 22:55:19.256 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 22:55:19.257 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53367 - "GET /role_types HTTP/1.1" 200
+2023-12-22 22:55:19.257 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 22:55:19.261 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 22:55:19.262 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 22:55:19.264 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53367 - "GET /role_types HTTP/1.1" 200
+2023-12-22 22:55:19.265 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 22:55:19.266 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 22:55:19.267 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 22:55:19.268 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53370 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 22:55:19.272 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 22:55:19.275 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 22:55:19.276 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 22:55:19.277 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 22:55:19.278 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 22:55:19.278 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 22:55:19.279 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 22:55:19.280 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 22:55:19.280 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 22:55:19.281 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53370 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:03:27.098 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:03:27.100 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53415 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:03:27.107 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:03:27.108 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53415 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:23:15.497 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53540 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 23:23:15.498 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53541 - "OPTIONS /org_types HTTP/1.1" 200
+2023-12-22 23:23:15.499 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53542 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 23:23:15.499 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53543 - "OPTIONS /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:23:15.499 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53544 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 23:23:15.499 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53545 - "OPTIONS /org_types HTTP/1.1" 200
+2023-12-22 23:23:15.500 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53540 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 23:23:15.500 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53541 - "OPTIONS /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:23:15.506 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:23:15.507 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 23:23:15.512 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 23:23:15.513 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53543 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:23:15.514 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53544 - "GET /org_types HTTP/1.1" 200
+2023-12-22 23:23:15.521 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:23:15.523 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 23:23:15.525 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 23:23:15.525 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53543 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:23:15.525 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53544 - "GET /org_types HTTP/1.1" 200
+2023-12-22 23:23:15.532 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:23:15.534 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53543 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:23:15.534 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 23:23:15.540 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:23:15.542 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53543 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:23:15.542 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 23:23:15.545 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 23:23:15.546 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 23:23:15.546 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 23:23:15.547 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 23:23:15.548 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 23:23:15.549 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53540 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:23:15.556 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 23:23:15.558 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 23:23:15.561 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 23:23:15.562 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 23:23:15.563 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 23:23:15.563 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 23:23:15.564 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 23:23:15.565 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 23:23:15.566 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 23:23:15.568 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53540 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:25:27.095 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:25:27.100 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 23:25:27.102 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53599 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:25:27.102 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53600 - "GET /org_types HTTP/1.1" 200
+2023-12-22 23:25:27.102 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 23:25:27.110 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:25:27.111 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 23:25:27.112 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53600 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:25:27.116 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 23:25:27.116 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53599 - "GET /org_types HTTP/1.1" 200
+2023-12-22 23:25:27.119 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 23:25:27.120 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:25:27.121 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53600 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:25:27.124 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 23:25:27.124 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:25:27.126 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53600 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:25:27.128 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 23:25:27.130 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 23:25:27.130 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 23:25:27.131 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 23:25:27.131 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 23:25:27.132 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53601 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:25:27.136 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 23:25:27.137 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 23:25:27.138 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 23:25:27.139 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 23:25:27.140 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 23:25:27.140 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 23:25:27.141 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 23:25:27.141 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 23:25:27.142 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 23:25:27.143 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53601 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:25:31.438 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:25:31.438 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 23:25:31.442 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53601 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:25:31.443 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 23:25:31.453 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 23:25:31.455 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:25:31.458 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53600 - "GET /org_types HTTP/1.1" 200
+2023-12-22 23:25:31.461 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53601 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:25:31.461 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 23:25:31.475 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 23:25:31.477 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:25:31.478 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 23:25:31.480 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53600 - "GET /org_types HTTP/1.1" 200
+2023-12-22 23:25:31.481 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53601 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:25:31.482 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 23:25:31.486 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:25:31.486 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 23:25:31.487 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53601 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:25:31.489 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 23:25:31.490 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 23:25:31.491 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 23:25:31.493 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53599 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:25:31.512 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 23:25:31.522 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 23:25:31.524 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 23:25:31.525 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 23:25:31.525 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 23:25:31.526 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 23:25:31.528 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 23:25:31.529 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 23:25:31.530 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 23:25:31.530 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53599 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:25:41.321 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:25:41.322 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 23:25:41.326 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 23:25:41.328 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53632 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:25:41.330 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53633 - "GET /org_types HTTP/1.1" 200
+2023-12-22 23:25:41.338 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:25:41.341 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53632 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:25:41.341 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 23:25:41.344 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 23:25:41.346 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53633 - "GET /org_types HTTP/1.1" 200
+2023-12-22 23:25:41.346 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 23:25:41.347 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:25:41.349 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53632 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:25:41.351 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 23:25:41.352 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:25:41.354 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53632 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:25:41.356 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 23:25:41.357 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 23:25:41.358 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 23:25:41.359 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 23:25:41.359 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 23:25:41.360 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53634 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:25:41.364 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 23:25:41.365 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 23:25:41.366 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 23:25:41.368 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 23:25:41.368 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 23:25:41.369 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 23:25:41.370 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 23:25:41.370 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 23:25:41.371 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 23:25:41.371 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53634 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:34:51.017 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53739 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 23:34:51.017 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53740 - "OPTIONS /org_types HTTP/1.1" 200
+2023-12-22 23:34:51.018 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53739 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 23:34:51.019 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53741 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 23:34:51.019 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53740 - "OPTIONS /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:34:51.019 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53742 - "OPTIONS /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:34:51.023 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53743 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 23:34:51.026 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53744 - "OPTIONS /org_types HTTP/1.1" 200
+2023-12-22 23:34:51.034 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:34:51.034 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 23:34:51.037 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53741 - "GET /org_types HTTP/1.1" 200
+2023-12-22 23:34:51.038 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53739 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:34:51.038 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 23:34:51.052 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:34:51.053 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 23:34:51.055 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53739 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:34:51.056 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53741 - "GET /org_types HTTP/1.1" 200
+2023-12-22 23:34:51.062 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 23:34:51.065 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:34:51.069 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53739 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:34:51.077 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 23:34:51.079 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:34:51.083 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53739 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:34:51.084 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 23:34:51.086 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 23:34:51.087 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 23:34:51.087 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 23:34:51.088 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 23:34:51.092 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 23:34:51.096 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53740 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:34:51.103 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 23:34:51.105 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 23:34:51.107 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 23:34:51.109 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 23:34:51.110 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 23:34:51.111 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 23:34:51.112 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 23:34:51.116 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 23:34:51.117 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 23:34:51.119 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53740 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:48:51.561 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-22 23:48:51.663 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-22 23:48:51.664 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-22 23:48:51.664 | INFO     | uvicorn.server:serve:86 - Finished server process [77844]
+2023-12-22 23:48:52.128 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-22 23:48:56.420 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53834 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 23:48:56.421 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53835 - "OPTIONS /org_types HTTP/1.1" 200
+2023-12-22 23:48:56.421 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53836 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 23:48:56.421 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53837 - "OPTIONS /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:48:56.421 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53838 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 23:48:56.421 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53834 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-22 23:48:56.421 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53839 - "OPTIONS /org_types HTTP/1.1" 200
+2023-12-22 23:48:56.422 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53835 - "OPTIONS /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:48:56.430 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 23:48:56.430 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:48:56.431 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 23:48:56.432 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53836 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:48:56.433 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53837 - "GET /org_types HTTP/1.1" 200
+2023-12-22 23:48:56.441 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 23:48:56.445 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 23:48:56.446 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:48:56.449 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53837 - "GET /org_types HTTP/1.1" 200
+2023-12-22 23:48:56.450 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 23:48:56.450 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53836 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:48:56.457 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:48:56.458 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 23:48:56.464 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53836 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:48:56.471 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:48:56.471 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 23:48:56.472 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53836 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:48:56.473 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 23:48:56.474 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 23:48:56.474 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 23:48:56.475 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 23:48:56.475 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53838 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:48:56.481 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 23:48:56.484 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 23:48:56.485 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 23:48:56.486 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 23:48:56.486 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 23:48:56.487 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 23:48:56.488 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 23:48:56.488 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 23:48:56.488 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 23:48:56.489 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53838 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:49:37.073 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:49:37.074 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 23:49:37.076 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 23:49:37.078 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53863 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:49:37.083 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53864 - "GET /org_types HTTP/1.1" 200
+2023-12-22 23:49:37.094 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:49:37.094 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-22 23:49:37.096 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53863 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:49:37.097 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53864 - "GET /org_types HTTP/1.1" 200
+2023-12-22 23:49:37.097 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 23:49:37.104 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:49:37.106 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 23:49:37.106 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53863 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:49:37.114 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-22 23:49:37.115 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 23:49:37.117 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53863 - "GET /role_types HTTP/1.1" 200
+2023-12-22 23:49:37.118 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 23:49:37.119 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 23:49:37.124 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 23:49:37.124 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 23:49:37.125 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 23:49:37.125 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53865 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-22 23:49:37.130 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-22 23:49:37.132 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-22 23:49:37.133 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-22 23:49:37.134 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-22 23:49:37.135 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-22 23:49:37.135 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-22 23:49:37.136 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-22 23:49:37.137 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-22 23:49:37.137 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-22 23:49:37.138 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53865 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-23 00:05:34.023 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53962 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-23 00:05:34.024 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53963 - "OPTIONS /org_types HTTP/1.1" 200
+2023-12-23 00:05:34.024 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53964 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-23 00:05:34.025 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53965 - "OPTIONS /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-23 00:05:34.025 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53966 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-23 00:05:34.025 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53967 - "OPTIONS /org_types HTTP/1.1" 200
+2023-12-23 00:05:34.025 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53962 - "OPTIONS /role_types HTTP/1.1" 200
+2023-12-23 00:05:34.025 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53963 - "OPTIONS /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-23 00:05:34.038 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-23 00:05:34.038 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-23 00:05:34.039 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:05:34.039 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53967 - "GET /org_types HTTP/1.1" 200
+2023-12-23 00:05:34.041 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53964 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:05:34.047 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-23 00:05:34.051 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-23 00:05:34.051 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:05:34.053 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53967 - "GET /org_types HTTP/1.1" 200
+2023-12-23 00:05:34.054 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53964 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:05:34.058 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-23 00:05:34.059 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:05:34.061 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53964 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:05:34.067 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-23 00:05:34.072 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:05:34.075 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53964 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:05:34.077 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-23 00:05:34.080 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-23 00:05:34.081 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-23 00:05:34.082 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-23 00:05:34.083 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-23 00:05:34.084 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53966 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-23 00:05:34.090 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-23 00:05:34.092 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-23 00:05:34.093 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-23 00:05:34.095 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-23 00:05:34.095 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-23 00:05:34.096 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-23 00:05:34.096 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-23 00:05:34.097 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-23 00:05:34.098 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-23 00:05:34.099 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53966 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-23 00:06:57.662 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:06:57.665 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-23 00:06:57.671 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-23 00:06:57.672 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-23 00:06:57.675 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-23 00:06:57.678 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-23 00:06:57.680 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-23 00:06:57.681 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-23 00:06:57.681 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-23 00:06:57.681 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-23 00:06:57.682 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-23 00:06:57.683 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-23 00:06:57.683 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-23 00:06:57.686 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-23 00:06:57.686 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-23 00:06:57.687 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-23 00:06:57.688 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-23 00:06:57.688 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-23 00:06:57.689 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-23 00:06:57.690 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-23 00:06:58.230 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-23 00:06:58.230 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:06:58.231 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-23 00:06:58.232 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54026 - "GET /org_types HTTP/1.1" 200
+2023-12-23 00:06:58.232 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54015 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:06:58.233 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-23 00:06:58.241 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-23 00:06:58.243 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:06:58.244 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54015 - "GET /org_types HTTP/1.1" 200
+2023-12-23 00:06:58.244 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-23 00:06:58.246 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54026 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:06:58.252 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:06:58.254 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-23 00:06:58.256 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54026 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:06:58.261 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:06:58.261 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-23 00:06:58.262 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54026 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:06:58.263 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-23 00:06:58.264 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-23 00:06:58.264 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-23 00:06:58.265 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-23 00:06:58.266 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54027 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-23 00:06:58.272 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-23 00:06:58.276 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-23 00:06:58.278 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-23 00:06:58.279 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-23 00:06:58.279 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-23 00:06:58.280 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-23 00:06:58.280 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-23 00:06:58.281 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-23 00:06:58.281 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-23 00:06:58.282 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54027 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-23 00:07:48.901 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-23 00:07:48.903 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-23 00:07:48.903 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:07:48.905 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54048 - "GET /org_types HTTP/1.1" 200
+2023-12-23 00:07:48.906 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54047 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:07:48.912 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-23 00:07:48.914 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-23 00:07:48.915 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:07:48.918 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54048 - "GET /org_types HTTP/1.1" 200
+2023-12-23 00:07:48.918 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54047 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:07:48.924 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-23 00:07:48.925 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:07:48.927 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54047 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:07:48.927 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-23 00:07:48.936 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:07:48.937 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-23 00:07:48.940 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54047 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:07:48.941 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-23 00:07:48.942 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-23 00:07:48.943 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-23 00:07:48.943 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-23 00:07:48.944 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54049 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-23 00:07:48.950 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-23 00:07:48.952 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-23 00:07:48.957 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-23 00:07:48.958 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-23 00:07:48.959 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-23 00:07:48.960 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-23 00:07:48.961 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-23 00:07:48.962 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-23 00:07:48.963 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-23 00:07:48.964 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54049 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-23 00:09:45.912 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:09:45.913 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-23 00:09:45.919 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54083 - "GET /org_types HTTP/1.1" 200
+2023-12-23 00:09:45.919 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54082 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:09:45.920 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-23 00:09:45.931 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:09:45.933 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-23 00:09:45.935 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54083 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:09:45.935 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-23 00:09:45.936 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54082 - "GET /org_types HTTP/1.1" 200
+2023-12-23 00:09:45.940 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:09:45.942 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54083 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:09:45.944 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-23 00:09:45.947 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-23 00:09:45.948 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-23 00:09:45.948 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-23 00:09:45.949 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:09:45.950 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54083 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:09:45.952 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-23 00:09:45.954 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-23 00:09:45.954 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-23 00:09:45.955 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54084 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-23 00:09:45.961 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-23 00:09:45.962 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-23 00:09:45.964 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-23 00:09:45.964 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-23 00:09:45.965 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-23 00:09:45.966 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-23 00:09:45.966 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-23 00:09:45.967 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-23 00:09:45.968 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-23 00:09:45.968 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54084 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-23 00:10:05.939 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-23 00:10:05.940 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:10:05.940 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-23 00:10:05.942 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54106 - "GET /org_types HTTP/1.1" 200
+2023-12-23 00:10:05.942 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54105 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:10:05.942 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-23 00:10:05.952 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-23 00:10:05.954 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:10:05.956 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54105 - "GET /org_types HTTP/1.1" 200
+2023-12-23 00:10:05.959 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54106 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:10:05.960 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-23 00:10:05.973 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:10:05.975 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54106 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:10:05.976 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-23 00:10:05.981 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-23 00:10:05.981 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-23 00:10:05.982 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54106 - "GET /role_types HTTP/1.1" 200
+2023-12-23 00:10:05.983 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-23 00:10:05.984 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-23 00:10:05.984 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-23 00:10:05.985 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-23 00:10:05.986 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54107 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-23 00:10:05.993 | INFO     | providers.psql_provider:fetch_one:30 - SELECT org_id FROM roles WHERE id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d'
+2023-12-23 00:10:05.996 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT
+        parents.*
+    FROM
+        parents;
+    
+2023-12-23 00:10:05.999 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af';
+        
+2023-12-23 00:10:05.999 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '4754b2d5-add2-4b47-9891-dfde3c992635';
+        
+2023-12-23 00:10:06.000 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '2066b1f1-d6c3-4520-ac06-c01dacc76f03';
+        
+2023-12-23 00:10:06.001 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = 'ecefbd09-a4e7-4b0a-9885-759e8b164397';
+        
+2023-12-23 00:10:06.002 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '7c56b92c-2210-4243-b5ce-a0347fe3cb64';
+        
+2023-12-23 00:10:06.003 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '90619bdf-61e4-4248-91f9-715c948bdab8';
+        
+2023-12-23 00:10:06.004 | INFO     | providers.psql_provider:fetch_all:39 - 
+        SELECT
+            users.id as id,
+            users.name as name,
+            users.email as email,
+            roles.type as type
+        FROM
+            users
+        JOIN
+            roles
+            ON
+            roles.user_id = users.id
+        WHERE
+            roles.org_id = '77607553-35da-4c13-973f-dd9088a68759';
+        
+2023-12-23 00:10:06.005 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54107 - "GET /orgs?role_id=e2fa169b-f1d0-4564-b970-e6de28475a8d HTTP/1.1" 200
+2023-12-23 00:12:43.909 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-23 00:12:44.010 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-23 00:12:44.011 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-23 00:12:44.011 | INFO     | uvicorn.server:serve:86 - Finished server process [80967]

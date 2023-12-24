@@ -1,0 +1,2139 @@
+2023-12-20 10:36:46.443 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-20 10:36:51.901 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:36:51.903 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:36:51.911 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61597 - "GET /test HTTP/1.1" 200
+2023-12-20 10:36:51.921 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:36:51.925 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:36:51.931 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61597 - "GET /test HTTP/1.1" 200
+2023-12-20 10:37:13.305 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:37:13.310 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:37:13.313 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61693 - "GET /test HTTP/1.1" 200
+2023-12-20 10:37:13.329 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:37:13.333 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:37:13.337 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61693 - "GET /test HTTP/1.1" 200
+2023-12-20 10:37:26.936 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:37:26.943 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:37:26.946 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61756 - "GET /test HTTP/1.1" 200
+2023-12-20 10:37:26.960 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:37:26.962 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:37:26.968 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61756 - "GET /test HTTP/1.1" 200
+2023-12-20 10:45:04.327 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:45:04.329 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:45:04.331 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:63679 - "GET /test HTTP/1.1" 200
+2023-12-20 10:45:04.337 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:45:04.338 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:45:04.340 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:63679 - "GET /test HTTP/1.1" 200
+2023-12-20 10:46:44.861 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64105 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 10:46:44.864 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64106 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 10:46:44.883 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:46:44.892 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:46:44.901 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64105 - "GET /test HTTP/1.1" 200
+2023-12-20 10:46:44.916 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:46:44.919 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:46:44.922 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64105 - "GET /test HTTP/1.1" 200
+2023-12-20 10:49:41.890 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-20 10:49:41.992 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-20 10:49:41.993 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-20 10:49:41.994 | INFO     | uvicorn.server:serve:86 - Finished server process [46550]
+2023-12-20 10:50:21.065 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-20 10:50:44.472 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:50:44.474 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:50:44.480 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:65140 - "GET /test HTTP/1.1" 200
+2023-12-20 10:50:44.491 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:50:44.495 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:50:44.498 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:65140 - "GET /test HTTP/1.1" 200
+2023-12-20 10:52:51.161 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:52:51.166 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:52:51.170 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49277 - "GET /test HTTP/1.1" 200
+2023-12-20 10:52:51.180 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:52:51.186 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:52:51.193 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49277 - "GET /test HTTP/1.1" 200
+2023-12-20 10:55:01.637 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:55:01.640 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:55:01.642 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49839 - "GET /test HTTP/1.1" 200
+2023-12-20 10:55:01.649 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:55:01.651 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:55:01.658 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49839 - "GET /test HTTP/1.1" 200
+2023-12-20 10:58:12.541 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50622 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 10:58:12.542 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50623 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 10:58:12.560 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:58:12.573 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:58:12.574 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50622 - "GET /test HTTP/1.1" 200
+2023-12-20 10:58:12.585 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:58:12.589 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:58:12.597 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50622 - "GET /test HTTP/1.1" 200
+2023-12-20 10:58:29.148 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:58:29.153 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:58:29.157 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50624 - "GET /test HTTP/1.1" 200
+2023-12-20 10:58:29.169 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 10:58:29.173 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 10:58:29.177 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50624 - "GET /test HTTP/1.1" 200
+2023-12-20 11:00:26.380 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:00:26.382 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:00:26.384 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51184 - "GET /test HTTP/1.1" 200
+2023-12-20 11:00:26.394 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:00:26.396 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:00:26.399 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51184 - "GET /test HTTP/1.1" 200
+2023-12-20 11:01:15.382 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:01:15.397 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:01:15.411 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51392 - "GET /test HTTP/1.1" 200
+2023-12-20 11:01:15.427 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:01:15.430 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:01:15.439 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51392 - "GET /test HTTP/1.1" 200
+2023-12-20 11:02:34.313 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:02:34.316 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:02:34.323 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51726 - "GET /test HTTP/1.1" 200
+2023-12-20 11:02:34.337 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:02:34.339 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:02:34.347 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51726 - "GET /test HTTP/1.1" 200
+2023-12-20 11:04:07.383 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:04:07.387 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:04:07.389 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52110 - "GET /test HTTP/1.1" 200
+2023-12-20 11:04:07.403 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:04:07.405 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:04:07.411 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52110 - "GET /test HTTP/1.1" 200
+2023-12-20 11:05:04.329 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:05:04.332 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:05:04.341 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52357 - "GET /test HTTP/1.1" 200
+2023-12-20 11:05:04.351 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:05:04.355 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:05:04.359 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52357 - "GET /test HTTP/1.1" 200
+2023-12-20 11:05:13.836 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:05:13.840 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:05:13.843 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52404 - "GET /test HTTP/1.1" 200
+2023-12-20 11:05:13.854 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:05:13.859 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:05:13.862 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52404 - "GET /test HTTP/1.1" 200
+2023-12-20 11:28:53.542 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52728 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 11:28:53.543 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52729 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 11:28:53.554 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:28:53.556 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:28:53.561 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52728 - "GET /test HTTP/1.1" 200
+2023-12-20 11:28:53.571 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:28:53.576 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:28:53.582 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52728 - "GET /test HTTP/1.1" 200
+2023-12-20 11:52:16.063 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52937 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 11:52:16.065 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52939 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 11:52:16.071 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:52:16.073 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:52:16.076 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52937 - "GET /test HTTP/1.1" 200
+2023-12-20 11:52:16.088 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 11:52:16.089 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 11:52:16.091 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52937 - "GET /test HTTP/1.1" 200
+2023-12-20 11:53:31.967 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52963 - "OPTIONS /token HTTP/1.1" 200
+2023-12-20 11:53:31.982 | INFO     | providers.psql_provider:fetch_one:30 - 
+    SELECT
+        id,
+        email,
+        password,
+        default_role_id
+    FROM
+        users
+    WHERE
+        users.email = '001@demo.com';
+    
+2023-12-20 11:53:31.987 | INFO     | providers.psql_provider:fetch_one:30 - 
+    SELECT
+        id,
+        email,
+        name,
+        default_role_id
+    FROM
+        users
+    WHERE
+        users.id = '051260d6-5952-4a97-b37a-4630f09937f3';
+    
+2023-12-20 11:53:31.988 | INFO     | providers.psql_provider:fetch_one:30 - 
+    SELECT
+        id,
+        email,
+        name,
+        default_role_id
+    FROM
+        users
+    WHERE
+        users.id = '051260d6-5952-4a97-b37a-4630f09937f3';
+    
+2023-12-20 11:53:31.993 | INFO     | providers.psql_provider:fetch_all:39 - 
+    SELECT
+        roles.id,
+        roles.type,
+        orgs.name
+    FROM
+        roles
+    JOIN
+        users
+        ON
+        users.id = roles.user_id
+    JOIN
+        orgs
+        ON
+        orgs.id = roles.org_id
+    WHERE
+        roles.user_id = '051260d6-5952-4a97-b37a-4630f09937f3';
+    
+2023-12-20 11:53:32.002 | INFO     | providers.psql_provider:fetch_all:39 - 
+    SELECT
+        code,
+        name
+    FROM
+        permissions
+    JOIN
+        role_permission_rels
+        ON
+        role_permission_rels.permission_code = permissions.code
+    JOIN
+        roles
+        ON
+        roles.id = role_permission_rels.role_id
+    WHERE
+        roles.id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d';
+    
+2023-12-20 11:53:32.011 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:52963 - "POST /token HTTP/1.1" 200
+2023-12-20 12:23:57.355 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53238 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 12:23:57.358 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53239 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 12:23:57.367 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:23:57.373 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:23:57.376 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53238 - "GET /test HTTP/1.1" 200
+2023-12-20 12:23:57.383 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:23:57.385 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:23:57.386 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53238 - "GET /test HTTP/1.1" 200
+2023-12-20 12:24:23.979 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:24:23.983 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:24:23.989 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53240 - "GET /test HTTP/1.1" 200
+2023-12-20 12:24:24.002 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:24:24.006 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:24:24.012 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53240 - "GET /test HTTP/1.1" 200
+2023-12-20 12:26:16.127 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:26:16.131 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:26:16.136 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53263 - "GET /test HTTP/1.1" 200
+2023-12-20 12:26:16.143 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:26:16.148 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:26:16.152 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53263 - "GET /test HTTP/1.1" 200
+2023-12-20 12:27:45.081 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:27:45.083 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:27:45.087 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53564 - "GET /test HTTP/1.1" 200
+2023-12-20 12:27:45.094 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:27:45.097 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:27:45.099 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53564 - "GET /test HTTP/1.1" 200
+2023-12-20 12:27:55.167 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:27:55.169 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:27:55.171 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53614 - "GET /test HTTP/1.1" 200
+2023-12-20 12:27:55.183 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:27:55.187 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:27:55.194 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53614 - "GET /test HTTP/1.1" 200
+2023-12-20 12:28:46.397 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:28:46.401 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:28:46.407 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53829 - "GET /test HTTP/1.1" 200
+2023-12-20 12:28:46.423 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:28:46.427 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:28:46.433 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53829 - "GET /test HTTP/1.1" 200
+2023-12-20 12:29:14.986 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:29:14.989 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:29:14.992 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53952 - "GET /test HTTP/1.1" 200
+2023-12-20 12:29:15.005 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:29:15.010 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:29:15.014 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53952 - "GET /test HTTP/1.1" 200
+2023-12-20 12:38:47.105 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56323 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 12:38:47.106 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56324 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 12:38:47.114 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:38:47.116 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:38:47.117 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56323 - "GET /test HTTP/1.1" 200
+2023-12-20 12:38:47.123 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:38:47.125 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:38:47.126 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56323 - "GET /test HTTP/1.1" 200
+2023-12-20 12:42:39.621 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:42:39.624 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:42:39.626 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:57280 - "GET /test HTTP/1.1" 200
+2023-12-20 12:42:39.633 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:42:39.636 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:42:39.639 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:57280 - "GET /test HTTP/1.1" 200
+2023-12-20 12:44:23.277 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:44:23.280 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:44:23.283 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:57708 - "GET /test HTTP/1.1" 200
+2023-12-20 12:44:23.291 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:44:23.294 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:44:23.296 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:57708 - "GET /test HTTP/1.1" 200
+2023-12-20 12:48:52.638 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58841 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 12:48:52.639 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58842 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 12:48:52.645 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:48:52.647 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:48:52.649 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58842 - "GET /test HTTP/1.1" 200
+2023-12-20 12:48:52.655 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:48:52.658 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:48:52.660 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58842 - "GET /test HTTP/1.1" 200
+2023-12-20 12:49:04.503 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:49:04.506 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:49:04.510 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58843 - "GET /test HTTP/1.1" 200
+2023-12-20 12:49:04.518 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:49:04.522 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:49:04.526 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58843 - "GET /test HTTP/1.1" 200
+2023-12-20 12:50:23.326 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:50:23.330 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:50:23.332 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59239 - "GET /test HTTP/1.1" 200
+2023-12-20 12:50:23.340 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:50:23.342 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:50:23.344 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59239 - "GET /test HTTP/1.1" 200
+2023-12-20 12:50:36.159 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:50:36.162 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:50:36.165 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59300 - "GET /test HTTP/1.1" 200
+2023-12-20 12:50:36.178 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:50:36.182 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:50:36.189 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59300 - "GET /test HTTP/1.1" 200
+2023-12-20 12:50:50.350 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:50:50.352 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:50:50.356 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59364 - "GET /test HTTP/1.1" 200
+2023-12-20 12:50:50.364 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:50:50.367 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:50:50.369 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59364 - "GET /test HTTP/1.1" 200
+2023-12-20 12:50:52.998 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:50:53.002 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:50:53.008 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59364 - "GET /test HTTP/1.1" 200
+2023-12-20 12:50:53.026 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:50:53.029 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:50:53.036 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59364 - "GET /test HTTP/1.1" 200
+2023-12-20 12:52:05.809 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:52:05.812 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:52:05.815 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59679 - "GET /test HTTP/1.1" 200
+2023-12-20 12:52:05.823 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:52:05.825 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:52:05.828 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59679 - "GET /test HTTP/1.1" 200
+2023-12-20 12:56:14.163 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:56:14.165 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:56:14.169 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60693 - "GET /test HTTP/1.1" 200
+2023-12-20 12:56:14.179 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:56:14.181 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:56:14.183 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60693 - "GET /test HTTP/1.1" 200
+2023-12-20 12:59:17.837 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61454 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 12:59:17.838 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61455 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 12:59:17.846 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:59:17.848 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:59:17.851 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61454 - "GET /test HTTP/1.1" 200
+2023-12-20 12:59:17.864 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 12:59:17.866 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 12:59:17.869 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61454 - "GET /test HTTP/1.1" 200
+2023-12-20 13:10:05.701 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-20 13:10:05.803 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-20 13:10:05.804 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-20 13:10:05.805 | INFO     | uvicorn.server:serve:86 - Finished server process [46803]
+2023-12-20 13:10:06.305 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-20 13:10:31.492 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-20 13:10:31.593 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-20 13:10:31.594 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-20 13:10:31.594 | INFO     | uvicorn.server:serve:86 - Finished server process [49712]
+2023-12-20 13:10:31.997 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-20 13:11:53.102 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64604 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 13:11:53.103 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64605 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 13:11:53.117 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 13:11:53.120 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 1 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 13:11:53.125 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64604 - "GET /test HTTP/1.1" 200
+2023-12-20 13:11:53.133 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 13:11:53.138 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 1 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 13:11:53.146 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64604 - "GET /test HTTP/1.1" 200
+2023-12-20 13:12:13.061 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-20 13:12:13.162 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-20 13:12:13.163 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-20 13:12:13.163 | INFO     | uvicorn.server:serve:86 - Finished server process [49725]
+2023-12-20 13:12:13.554 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-20 13:12:16.921 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 13:12:16.924 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 13:12:16.927 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64712 - "GET /test HTTP/1.1" 200
+2023-12-20 13:12:16.939 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 13:12:16.942 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 13:12:16.948 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64712 - "GET /test HTTP/1.1" 200
+2023-12-20 13:16:35.337 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 13:16:35.340 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 13:16:35.343 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49383 - "GET /test HTTP/1.1" 200
+2023-12-20 13:16:35.358 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 13:16:35.360 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 13:16:35.366 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49383 - "GET /test HTTP/1.1" 200
+2023-12-20 13:22:09.839 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50774 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 13:22:09.840 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50775 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 13:22:09.857 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 13:22:09.859 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 13:22:09.860 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50774 - "GET /test HTTP/1.1" 200
+2023-12-20 13:22:09.884 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 13:22:09.887 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 13:22:09.889 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50774 - "GET /test HTTP/1.1" 200
+2023-12-20 13:22:15.276 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 13:22:15.282 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 13:22:15.298 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50776 - "GET /test HTTP/1.1" 200
+2023-12-20 13:22:15.317 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 13:22:15.319 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 13:22:15.320 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50776 - "GET /test HTTP/1.1" 200
+2023-12-20 14:34:37.549 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53004 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 14:34:37.550 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53005 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 14:34:37.559 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 14:34:37.563 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 14:34:37.565 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53004 - "GET /test HTTP/1.1" 200
+2023-12-20 14:34:37.573 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 14:34:37.575 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 14:34:37.577 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53004 - "GET /test HTTP/1.1" 200
+2023-12-20 15:04:59.480 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60444 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 15:04:59.481 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60445 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 15:04:59.494 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:04:59.496 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:04:59.499 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60444 - "GET /test HTTP/1.1" 200
+2023-12-20 15:04:59.516 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:04:59.519 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:04:59.526 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60444 - "GET /test HTTP/1.1" 200
+2023-12-20 15:06:26.805 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:06:26.809 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:06:26.819 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60806 - "GET /test HTTP/1.1" 200
+2023-12-20 15:06:26.825 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:06:26.827 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:06:26.831 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60806 - "GET /test HTTP/1.1" 200
+2023-12-20 15:07:01.754 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:07:01.757 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:07:01.759 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60961 - "GET /test HTTP/1.1" 200
+2023-12-20 15:07:01.766 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:07:01.768 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:07:01.771 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60961 - "GET /test HTTP/1.1" 200
+2023-12-20 15:07:11.401 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:07:11.403 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:07:11.407 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61006 - "GET /test HTTP/1.1" 200
+2023-12-20 15:07:11.414 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:07:11.422 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:07:11.426 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61006 - "GET /test HTTP/1.1" 200
+2023-12-20 15:07:56.351 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:07:56.353 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:07:56.356 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61206 - "GET /test HTTP/1.1" 200
+2023-12-20 15:07:56.373 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:07:56.376 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:07:56.379 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61206 - "GET /test HTTP/1.1" 200
+2023-12-20 15:09:09.931 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:09:09.934 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:09:09.936 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61515 - "GET /test HTTP/1.1" 200
+2023-12-20 15:09:09.956 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:09:09.958 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:09:09.960 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61515 - "GET /test HTTP/1.1" 200
+2023-12-20 15:09:19.341 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:09:19.344 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:09:19.347 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61567 - "GET /test HTTP/1.1" 200
+2023-12-20 15:09:19.359 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:09:19.366 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:09:19.373 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61567 - "GET /test HTTP/1.1" 200
+2023-12-20 15:17:00.297 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:63425 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 15:17:00.298 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:63426 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 15:17:00.305 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:17:00.311 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:17:00.313 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:63425 - "GET /test HTTP/1.1" 200
+2023-12-20 15:17:00.322 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:17:00.325 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:17:00.331 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:63425 - "GET /test HTTP/1.1" 200
+2023-12-20 15:17:28.017 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:17:28.020 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:17:28.025 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:63427 - "GET /test HTTP/1.1" 200
+2023-12-20 15:17:28.037 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:17:28.041 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:17:28.051 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:63427 - "GET /test HTTP/1.1" 200
+2023-12-20 15:18:24.197 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:18:24.199 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:18:24.201 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:63791 - "GET /test HTTP/1.1" 200
+2023-12-20 15:18:24.208 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:18:24.210 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:18:24.211 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:63791 - "GET /test HTTP/1.1" 200
+2023-12-20 15:20:47.884 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:20:47.886 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:20:47.890 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64389 - "GET /test HTTP/1.1" 200
+2023-12-20 15:20:47.902 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:20:47.915 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:20:47.926 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64389 - "GET /test HTTP/1.1" 200
+2023-12-20 15:21:34.818 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:21:34.823 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:21:34.827 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64590 - "GET /test HTTP/1.1" 200
+2023-12-20 15:21:34.835 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:21:34.841 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:21:34.842 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64590 - "GET /test HTTP/1.1" 200
+2023-12-20 15:22:10.464 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:22:10.468 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:22:10.474 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64749 - "GET /test HTTP/1.1" 200
+2023-12-20 15:22:10.492 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:22:10.496 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:22:10.504 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64749 - "GET /test HTTP/1.1" 200
+2023-12-20 15:22:50.965 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:22:50.968 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:22:50.971 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64924 - "GET /test HTTP/1.1" 200
+2023-12-20 15:22:50.995 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:22:51.000 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:22:51.002 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:64924 - "GET /test HTTP/1.1" 200
+2023-12-20 15:28:35.026 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49962 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 15:28:35.029 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49963 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 15:28:35.038 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:28:35.041 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:28:35.043 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49962 - "GET /test HTTP/1.1" 200
+2023-12-20 15:28:35.048 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:28:35.050 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:28:35.051 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49962 - "GET /test HTTP/1.1" 200
+2023-12-20 15:28:58.843 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:28:58.847 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:28:58.851 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49964 - "GET /test HTTP/1.1" 200
+2023-12-20 15:28:58.863 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:28:58.867 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:28:58.874 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:49964 - "GET /test HTTP/1.1" 200
+2023-12-20 15:32:21.740 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:32:21.743 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:32:21.746 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50932 - "GET /test HTTP/1.1" 200
+2023-12-20 15:32:21.752 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:32:21.755 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:32:21.758 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:50932 - "GET /test HTTP/1.1" 200
+2023-12-20 15:32:47.714 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:32:47.717 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:32:47.725 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51047 - "GET /test HTTP/1.1" 200
+2023-12-20 15:32:47.744 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:32:47.751 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:32:47.764 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51047 - "GET /test HTTP/1.1" 200
+2023-12-20 15:33:08.318 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:33:08.320 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:33:08.324 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51143 - "GET /test HTTP/1.1" 200
+2023-12-20 15:33:08.332 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:33:08.335 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:33:08.338 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51143 - "GET /test HTTP/1.1" 200
+2023-12-20 15:33:44.226 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:33:44.229 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:33:44.232 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51297 - "GET /test HTTP/1.1" 200
+2023-12-20 15:33:44.244 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:33:44.246 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:33:44.249 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51297 - "GET /test HTTP/1.1" 200
+2023-12-20 15:35:28.621 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:35:28.625 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:35:28.628 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51729 - "GET /test HTTP/1.1" 200
+2023-12-20 15:35:28.643 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:35:28.648 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:35:28.650 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51729 - "GET /test HTTP/1.1" 200
+2023-12-20 15:35:58.500 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:35:58.503 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:35:58.506 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51858 - "GET /test HTTP/1.1" 200
+2023-12-20 15:35:58.519 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:35:58.523 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:35:58.536 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:51858 - "GET /test HTTP/1.1" 200
+2023-12-20 15:43:36.617 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53845 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 15:43:36.620 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53846 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 15:43:36.631 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:43:36.634 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:43:36.637 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53845 - "GET /test HTTP/1.1" 200
+2023-12-20 15:43:36.649 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:43:36.653 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:43:36.659 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53845 - "GET /test HTTP/1.1" 200
+2023-12-20 15:44:10.239 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:44:10.242 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:44:10.245 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53847 - "GET /test HTTP/1.1" 200
+2023-12-20 15:44:10.256 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:44:10.258 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:44:10.260 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:53847 - "GET /test HTTP/1.1" 200
+2023-12-20 15:44:44.264 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:44:44.266 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:44:44.268 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54187 - "GET /test HTTP/1.1" 200
+2023-12-20 15:44:44.281 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:44:44.284 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:44:44.286 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54187 - "GET /test HTTP/1.1" 200
+2023-12-20 15:45:08.704 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:45:08.707 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:45:08.711 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54309 - "GET /test HTTP/1.1" 200
+2023-12-20 15:45:08.718 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:45:08.724 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:45:08.728 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54309 - "GET /test HTTP/1.1" 200
+2023-12-20 15:46:10.217 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:46:10.220 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:46:10.223 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54568 - "GET /test HTTP/1.1" 200
+2023-12-20 15:46:10.233 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:46:10.238 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:46:10.243 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54568 - "GET /test HTTP/1.1" 200
+2023-12-20 15:47:56.643 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:47:56.646 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:47:56.648 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54603 - "GET /test HTTP/1.1" 200
+2023-12-20 15:47:56.658 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:47:56.661 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:47:56.664 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54603 - "GET /test HTTP/1.1" 200
+2023-12-20 15:49:35.864 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:49:35.866 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:49:35.868 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54634 - "GET /test HTTP/1.1" 200
+2023-12-20 15:49:35.873 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:49:35.876 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:49:35.879 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54634 - "GET /test HTTP/1.1" 200
+2023-12-20 15:49:36.528 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:49:36.531 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:49:36.557 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54634 - "GET /test HTTP/1.1" 200
+2023-12-20 15:49:36.565 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:49:36.567 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:49:36.569 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54634 - "GET /test HTTP/1.1" 200
+2023-12-20 15:50:07.294 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:50:07.297 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:50:07.302 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54661 - "GET /test HTTP/1.1" 200
+2023-12-20 15:50:07.312 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:50:07.316 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:50:07.323 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54661 - "GET /test HTTP/1.1" 200
+2023-12-20 15:52:23.075 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:52:23.077 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:52:23.080 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54677 - "GET /test HTTP/1.1" 200
+2023-12-20 15:52:23.095 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:52:23.099 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:52:23.101 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54677 - "GET /test HTTP/1.1" 200
+2023-12-20 15:56:17.407 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54699 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 15:56:17.408 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54700 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 15:56:17.416 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:56:17.420 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:56:17.425 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54699 - "GET /test HTTP/1.1" 200
+2023-12-20 15:56:17.436 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:56:17.441 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:56:17.448 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54699 - "GET /test HTTP/1.1" 200
+2023-12-20 15:58:50.528 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:58:50.530 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:58:50.533 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54778 - "GET /test HTTP/1.1" 200
+2023-12-20 15:58:50.545 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 15:58:50.548 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 15:58:50.552 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54778 - "GET /test HTTP/1.1" 200
+2023-12-20 16:04:58.613 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 16:04:58.618 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 16:04:58.620 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54807 - "GET /test HTTP/1.1" 200
+2023-12-20 16:04:58.631 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 16:04:58.633 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 16:04:58.636 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:54807 - "GET /test HTTP/1.1" 200
+2023-12-20 16:23:22.540 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55089 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 16:23:22.541 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55090 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 16:23:22.555 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 16:23:22.560 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 16:23:22.566 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55089 - "GET /test HTTP/1.1" 200
+2023-12-20 16:23:22.591 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 16:23:22.594 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 16:23:22.596 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55089 - "GET /test HTTP/1.1" 200
+2023-12-20 16:23:52.316 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 16:23:52.319 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 16:23:52.327 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55091 - "GET /test HTTP/1.1" 200
+2023-12-20 16:23:52.339 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 16:23:52.342 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 16:23:52.345 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55091 - "GET /test HTTP/1.1" 200
+2023-12-20 16:25:48.383 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 16:25:48.388 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 16:25:48.392 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55699 - "GET /test HTTP/1.1" 200
+2023-12-20 16:25:48.400 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 16:25:48.404 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 16:25:48.413 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55699 - "GET /test HTTP/1.1" 200
+2023-12-20 16:34:20.735 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:57787 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 16:34:20.736 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:57788 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 16:34:20.747 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 16:34:20.752 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 16:34:20.760 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:57787 - "GET /test HTTP/1.1" 200
+2023-12-20 16:34:20.771 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 16:34:20.774 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 16:34:20.779 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:57787 - "GET /test HTTP/1.1" 200
+2023-12-20 16:40:23.060 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 16:40:23.066 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 16:40:23.072 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58373 - "GET /test HTTP/1.1" 200
+2023-12-20 16:40:23.085 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 16:40:23.087 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 16:40:23.090 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58373 - "GET /test HTTP/1.1" 200
+2023-12-20 17:08:37.807 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58746 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 17:08:37.809 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58747 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 17:08:37.815 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:08:37.819 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:08:37.823 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58747 - "GET /test HTTP/1.1" 200
+2023-12-20 17:08:37.830 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:08:37.832 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:08:37.833 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58747 - "GET /test HTTP/1.1" 200
+2023-12-20 17:09:07.241 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:09:07.244 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:09:07.246 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58748 - "GET /test HTTP/1.1" 200
+2023-12-20 17:09:07.252 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:09:07.254 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:09:07.255 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58748 - "GET /test HTTP/1.1" 200
+2023-12-20 17:10:22.753 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:10:22.755 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:10:22.757 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58807 - "GET /test HTTP/1.1" 200
+2023-12-20 17:10:22.762 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:10:22.764 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:10:22.765 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58807 - "GET /test HTTP/1.1" 200
+2023-12-20 17:10:35.980 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:10:35.981 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:10:35.983 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58822 - "GET /test HTTP/1.1" 200
+2023-12-20 17:10:35.990 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:10:35.992 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:10:35.993 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58822 - "GET /test HTTP/1.1" 200
+2023-12-20 17:10:48.131 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:10:48.133 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:10:48.134 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58835 - "GET /test HTTP/1.1" 200
+2023-12-20 17:10:48.142 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:10:48.144 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:10:48.150 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58835 - "GET /test HTTP/1.1" 200
+2023-12-20 17:11:28.569 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:11:28.571 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:11:28.573 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58861 - "GET /test HTTP/1.1" 200
+2023-12-20 17:11:28.579 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:11:28.580 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:11:28.582 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58861 - "GET /test HTTP/1.1" 200
+2023-12-20 17:11:47.149 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:11:47.151 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:11:47.153 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58877 - "GET /test HTTP/1.1" 200
+2023-12-20 17:11:47.160 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:11:47.162 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:11:47.164 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58877 - "GET /test HTTP/1.1" 200
+2023-12-20 17:13:09.622 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:13:09.623 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:13:09.625 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58915 - "GET /test HTTP/1.1" 200
+2023-12-20 17:13:09.632 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:13:09.634 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:13:09.636 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58915 - "GET /test HTTP/1.1" 200
+2023-12-20 17:13:53.594 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:13:53.595 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:13:53.597 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58943 - "GET /test HTTP/1.1" 200
+2023-12-20 17:13:53.604 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:13:53.607 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:13:53.610 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58943 - "GET /test HTTP/1.1" 200
+2023-12-20 17:14:02.404 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:14:02.406 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:14:02.407 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58956 - "GET /test HTTP/1.1" 200
+2023-12-20 17:14:02.414 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:14:02.416 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:14:02.419 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58956 - "GET /test HTTP/1.1" 200
+2023-12-20 17:14:19.740 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:14:19.742 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:14:19.744 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58972 - "GET /test HTTP/1.1" 200
+2023-12-20 17:14:19.749 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:14:19.751 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:14:19.753 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58972 - "GET /test HTTP/1.1" 200
+2023-12-20 17:18:37.710 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:18:37.713 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:18:37.716 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59088 - "GET /test HTTP/1.1" 200
+2023-12-20 17:18:37.727 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:18:37.730 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:18:37.734 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59088 - "GET /test HTTP/1.1" 200
+2023-12-20 17:20:06.149 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59372 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 17:20:06.150 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59373 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 17:20:06.159 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:20:06.162 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:20:06.170 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59372 - "GET /test HTTP/1.1" 200
+2023-12-20 17:20:06.182 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:20:06.199 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:20:06.204 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59372 - "GET /test HTTP/1.1" 200
+2023-12-20 17:29:02.265 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:29:02.267 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:29:02.269 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61738 - "GET /test HTTP/1.1" 200
+2023-12-20 17:29:02.274 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:29:02.276 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:29:02.282 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:61738 - "GET /test HTTP/1.1" 200
+2023-12-20 17:43:09.073 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:63424 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 17:43:09.078 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:63425 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 17:43:09.091 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:43:09.094 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:43:09.096 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:63424 - "GET /test HTTP/1.1" 200
+2023-12-20 17:43:09.105 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:43:09.108 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:43:09.111 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:63424 - "GET /test HTTP/1.1" 200
+2023-12-20 17:50:15.501 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:50:15.504 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:50:15.506 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:65176 - "GET /test HTTP/1.1" 200
+2023-12-20 17:50:15.514 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:50:15.521 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:50:15.523 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:65176 - "GET /test HTTP/1.1" 200
+2023-12-20 17:53:16.296 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:65491 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 17:53:16.297 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:65492 - "OPTIONS /test HTTP/1.1" 200
+2023-12-20 17:53:16.305 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:53:16.308 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:53:16.310 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:65491 - "GET /test HTTP/1.1" 200
+2023-12-20 17:53:16.327 | INFO     | providers.psql_provider:fetch_value:48 - SELECT id FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+2023-12-20 17:53:16.329 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT id, type, name, parent_id, 0 as depth FROM orgs WHERE id = '7a756ca8-83ca-47aa-96f0-385bc82ba7af'
+        UNION ALL 
+        SELECT child.id, child.type, child.name, child.parent_id, parents.depth + 1 as depth FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-20 17:53:16.330 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:65491 - "GET /test HTTP/1.1" 200
+2023-12-21 09:59:12.232 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-21 09:59:12.334 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-21 09:59:12.334 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-21 09:59:12.335 | INFO     | uvicorn.server:serve:86 - Finished server process [49770]

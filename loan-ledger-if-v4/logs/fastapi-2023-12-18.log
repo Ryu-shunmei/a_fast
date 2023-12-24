@@ -1,0 +1,1800 @@
+2023-12-18 15:37:19.447 | ERROR    | uvicorn.lifespan.on:send:121 - Traceback (most recent call last):
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 2329, in connect
+    return await connect_utils._connect(
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 991, in _connect
+    conn = await _connect_addr(
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 828, in _connect_addr
+    return await __connect_addr(params, True, *args)
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 873, in __connect_addr
+    tr, pr = await connector
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 744, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "uvloop/loop.pyx", line 2029, in create_connection
+  File "uvloop/loop.pyx", line 2016, in uvloop.loop.Loop.create_connection
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 677, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/contextlib.py", line 181, in __aenter__
+    return await self.gen.__anext__()
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/main.py", line 17, in lifespan
+    await psql_provider.register()
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/providers/psql_provider.py", line 66, in register
+    await DB().connect()
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/providers/psql_provider.py", line 21, in connect
+    self._connection_pool = await create_pool(
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/pool.py", line 403, in _async__init__
+    await self._initialize()
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/pool.py", line 430, in _initialize
+    await first_ch.connect()
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/pool.py", line 128, in connect
+    self._con = await self._pool._get_new_connection()
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/pool.py", line 502, in _get_new_connection
+    con = await connection.connect(
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 2329, in connect
+    return await connect_utils._connect(
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/async_timeout/__init__.py", line 141, in __aexit__
+    self._do_exit(exc_type)
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/async_timeout/__init__.py", line 228, in _do_exit
+    raise asyncio.TimeoutError
+asyncio.exceptions.TimeoutError
+
+2023-12-18 15:37:19.449 | ERROR    | uvicorn.lifespan.on:startup:57 - Application startup failed. Exiting.
+2023-12-18 15:39:03.292 | ERROR    | uvicorn.lifespan.on:send:121 - Traceback (most recent call last):
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 2329, in connect
+    return await connect_utils._connect(
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 991, in _connect
+    conn = await _connect_addr(
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 828, in _connect_addr
+    return await __connect_addr(params, True, *args)
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 873, in __connect_addr
+    tr, pr = await connector
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 744, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "uvloop/loop.pyx", line 2029, in create_connection
+  File "uvloop/loop.pyx", line 2016, in uvloop.loop.Loop.create_connection
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 677, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/contextlib.py", line 181, in __aenter__
+    return await self.gen.__anext__()
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/main.py", line 17, in lifespan
+    await psql_provider.register()
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/providers/psql_provider.py", line 66, in register
+    await DB().connect()
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/providers/psql_provider.py", line 21, in connect
+    self._connection_pool = await create_pool(
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/pool.py", line 403, in _async__init__
+    await self._initialize()
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/pool.py", line 430, in _initialize
+    await first_ch.connect()
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/pool.py", line 128, in connect
+    self._con = await self._pool._get_new_connection()
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/pool.py", line 502, in _get_new_connection
+    con = await connection.connect(
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 2329, in connect
+    return await connect_utils._connect(
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/async_timeout/__init__.py", line 141, in __aexit__
+    self._do_exit(exc_type)
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/async_timeout/__init__.py", line 228, in _do_exit
+    raise asyncio.TimeoutError
+asyncio.exceptions.TimeoutError
+
+2023-12-18 15:39:03.293 | ERROR    | uvicorn.lifespan.on:startup:57 - Application startup failed. Exiting.
+2023-12-18 15:40:14.741 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 15:40:26.536 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59596 - "GET /orgs HTTP/1.1" 404
+2023-12-18 15:40:45.020 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 15:40:45.122 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 15:40:45.122 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 15:40:45.123 | INFO     | uvicorn.server:serve:86 - Finished server process [96545]
+2023-12-18 15:40:45.507 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 15:40:48.501 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59601 - "GET /orgs HTTP/1.1" 405
+2023-12-18 15:40:54.326 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 15:40:54.427 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 15:40:54.428 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 15:40:54.428 | INFO     | uvicorn.server:serve:86 - Finished server process [96559]
+2023-12-18 15:40:54.818 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 15:40:56.192 | INFO     | providers.psql_provider:fetch_all:39 - 
+    SELECT
+        id,
+        type,
+        name,
+        remark,
+        parent_id,
+        created_at,
+        updated_at
+    FROME
+        orgs
+    ORDER BY created_at ASC;
+    
+2023-12-18 15:40:56.195 | ERROR    | app.endpoints.master:auth_for_token:22 - syntax error at or near "orgs"Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 4
+               │     └ 7
+               └ <function _main at 0x104eb19d0>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 4
+           │    └ <function BaseProcess._bootstrap at 0x104c2f430>
+           └ <SpawnProcess name='SpawnProcess-3' parent=96543 started>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x104c23a60>
+    └ <SpawnProcess name='SpawnProcess-3' parent=96543 started>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x104e9bf70>, 'target': <bound method Server.run of <uvicorn.server.Server object...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-3' parent=96543 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-3' parent=96543 started>
+    │    └ <function subprocess_started at 0x10866b820>
+    └ <SpawnProcess name='SpawnProcess-3' parent=96543 started>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x104e9bf40>>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/server.py", line 61, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ [<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 8000)>]
+           │       │   │    └ <function Server.serve at 0x10865ddc0>
+           │       │   └ <uvicorn.server.Server object at 0x104e9bf40>
+           │       └ <function run at 0x104eef790>
+           └ <module 'asyncio' from '/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/async...
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x108602ec0>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x1086b4280>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1088c20d0>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1088c20...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x1088a7af0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x1086b4280>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/applications.py", line 1106, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1088c20d0>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1088c20...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1088c20d0>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1088c20...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x1088a71c0>
+          └ <fastapi.applications.FastAPI object at 0x1088a7af0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x1088a68b0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1088c20...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x1088a7220>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x1088a71c0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x1088a68b0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1088c20...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x1088a7250>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x1088a7220>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x1083de4c0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1088c20...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1088a72b0>
+          └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x1088a7250>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x1083de4c0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1088c20...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x1088a7c10>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1088a72b0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x1083de4c0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1088c20...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function Route.handle at 0x107d4f940>
+          └ APIRoute(path='/orgs', name='auth_for_token', methods=['GET'])
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x1083de4c0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1088c20...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function request_response.<locals>.app at 0x1088a6430>
+          └ APIRoute(path='/orgs', name='auth_for_token', methods=['GET'])
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+                     │    └ <starlette.requests.Request object at 0x1088c24f0>
+                     └ <function get_request_handler.<locals>.app at 0x1088a63a0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x107d2e5e0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'db': <providers.psql_provider.DB object at 0x10868b0d0>}
+                 │         └ <function auth_for_token at 0x1084099d0>
+                 └ <fastapi.dependencies.models.Dependant object at 0x1088a7fd0>
+
+> File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/endpoints/master.py", line 16, in auth_for_token
+    tree = await common_crud.query_orgs(db)
+                 │           │          └ <providers.psql_provider.DB object at 0x10868b0d0>
+                 │           └ <function query_orgs at 0x1084098b0>
+                 └ <module 'app.crud.common_crud' from '/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/crud/common_crud.py'>
+
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/crud/common_crud.py", line 18, in query_orgs
+    return await db.fetch_all(sql)
+                 │  │         └ '\n    SELECT\n        id,\n        type,\n        name,\n        remark,\n        parent_id,\n        created_at,\n        u...
+                 │  └ <function DB.fetch_all at 0x1083f48b0>
+                 └ <providers.psql_provider.DB object at 0x10868b0d0>
+
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/providers/psql_provider.py", line 40, in fetch_all
+    result = await con.fetch(query)
+                   │   │     └ '\n    SELECT\n        id,\n        type,\n        name,\n        remark,\n        parent_id,\n        created_at,\n        u...
+                   │   └ <function Connection.fetch at 0x108150ee0>
+                   └ <PoolConnectionProxy [released] 0x1088c2700>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 691, in fetch
+    return await self._execute(
+                 │    └ <function Connection._execute at 0x108146040>
+                 └ <asyncpg.connection.Connection object at 0x108756e50>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1794, in _execute
+    result, _ = await self.__execute(
+                      └ <asyncpg.connection.Connection object at 0x108756e50>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1892, in __execute
+    result, stmt = await self._do_execute(
+                         │    └ <function Connection._do_execute at 0x108146430>
+                         └ <asyncpg.connection.Connection object at 0x108756e50>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1933, in _do_execute
+    stmt = await self._get_statement(
+                 │    └ <function Connection._get_statement at 0x108143550>
+                 └ <asyncpg.connection.Connection object at 0x108756e50>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 433, in _get_statement
+    statement = await self._protocol.prepare(
+                      │    └ <member '_protocol' of 'Connection' objects>
+                      └ <asyncpg.connection.Connection object at 0x108756e50>
+  File "asyncpg/protocol/protocol.pyx", line 166, in prepare
+    return await waiter
+
+asyncpg.exceptions.PostgresSyntaxError: syntax error at or near "orgs"
+
+2023-12-18 15:40:56.209 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59605 - "GET /orgs HTTP/1.1" 500
+2023-12-18 15:41:35.967 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 15:41:36.069 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 15:41:36.069 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 15:41:36.070 | INFO     | uvicorn.server:serve:86 - Finished server process [96570]
+2023-12-18 15:41:36.441 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 15:41:43.240 | INFO     | providers.psql_provider:fetch_all:39 - 
+    SELECT
+        id,
+        type,
+        name,
+        remark,
+        parent_id,
+        created_at,
+        updated_at
+    FROM
+        orgs
+    ORDER BY created_at ASC;
+    
+2023-12-18 15:41:43.247 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59612 - "GET /orgs HTTP/1.1" 200
+2023-12-18 15:46:06.659 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 15:46:06.761 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 15:46:06.761 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 15:46:06.762 | INFO     | uvicorn.server:serve:86 - Finished server process [96587]
+2023-12-18 15:46:07.136 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 15:47:05.909 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 15:47:06.011 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 15:47:06.012 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 15:47:06.012 | INFO     | uvicorn.server:serve:86 - Finished server process [96660]
+2023-12-18 15:47:06.382 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 15:47:21.861 | INFO     | providers.psql_provider:fetch_all:39 - 
+    SELECT
+        id,
+        type,
+        name,
+        remark,
+        parent_id,
+        created_at,
+        updated_at
+    FROM
+        orgs
+    ORDER BY created_at ASC;
+    
+2023-12-18 15:47:21.868 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59650 - "GET /orgs HTTP/1.1" 200
+2023-12-18 15:56:13.908 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 15:56:14.010 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 15:56:14.010 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 15:56:14.010 | INFO     | uvicorn.server:serve:86 - Finished server process [96681]
+2023-12-18 15:56:14.372 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 15:56:18.883 | INFO     | providers.psql_provider:fetch_all:39 - 
+    SELECT
+        id,
+        type,
+        name,
+        remark,
+        parent_id,
+        created_at,
+        updated_at
+    FROM
+        orgs
+    ORDER BY created_at ASC;
+    
+2023-12-18 15:56:18.894 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59682 - "GET /orgs HTTP/1.1" 200
+2023-12-18 15:56:45.952 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 15:56:46.054 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 15:56:46.054 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 15:56:46.054 | INFO     | uvicorn.server:serve:86 - Finished server process [96796]
+2023-12-18 15:56:46.428 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 15:56:51.587 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 15:56:51.689 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 15:56:51.689 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 15:56:51.689 | INFO     | uvicorn.server:serve:86 - Finished server process [96816]
+2023-12-18 15:56:52.080 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 15:58:56.510 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 15:58:56.611 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 15:58:56.611 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 15:58:56.611 | INFO     | uvicorn.server:serve:86 - Finished server process [96823]
+2023-12-18 15:58:57.003 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:01:34.720 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:01:34.821 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:01:34.822 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:01:34.822 | INFO     | uvicorn.server:serve:86 - Finished server process [96855]
+2023-12-18 16:01:35.192 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:01:44.099 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:01:44.201 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:01:44.201 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:01:44.202 | INFO     | uvicorn.server:serve:86 - Finished server process [96894]
+2023-12-18 16:01:44.586 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:01:50.018 | INFO     | providers.psql_provider:fetch_all:39 - 
+    SELECT
+        id,
+        type,
+        name,
+        remark,
+        parent_id,
+        created_at,
+        updated_at
+    FROM
+        orgs
+    ORDER BY created_at ASC;
+    
+2023-12-18 16:01:50.026 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59712 - "GET /orgs HTTP/1.1" 200
+2023-12-18 16:17:50.389 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:17:50.489 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:17:50.490 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:17:50.490 | INFO     | uvicorn.server:serve:86 - Finished server process [96904]
+2023-12-18 16:17:50.866 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:20:50.842 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:20:50.943 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:20:50.944 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:20:50.944 | INFO     | uvicorn.server:serve:86 - Finished server process [97103]
+2023-12-18 16:20:51.304 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:21:52.544 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:21:52.646 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:21:52.647 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:21:52.647 | INFO     | uvicorn.server:serve:86 - Finished server process [97154]
+2023-12-18 16:21:53.022 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:22:24.319 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:22:24.421 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:22:24.421 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:22:24.421 | INFO     | uvicorn.server:serve:86 - Finished server process [97176]
+2023-12-18 16:22:24.790 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:22:34.200 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:22:34.301 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:22:34.302 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:22:34.302 | INFO     | uvicorn.server:serve:86 - Finished server process [97189]
+2023-12-18 16:22:34.683 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:25:26.978 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:25:27.079 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:25:27.080 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:25:27.080 | INFO     | uvicorn.server:serve:86 - Finished server process [97198]
+2023-12-18 16:25:27.444 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:26:03.872 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:26:03.974 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:26:03.974 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:26:03.974 | INFO     | uvicorn.server:serve:86 - Finished server process [97262]
+2023-12-18 16:26:04.355 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:26:47.692 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:26:47.793 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:26:47.794 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:26:47.794 | INFO     | uvicorn.server:serve:86 - Finished server process [97277]
+2023-12-18 16:26:48.171 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:27:18.123 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:27:18.224 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:27:18.225 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:27:18.225 | INFO     | uvicorn.server:serve:86 - Finished server process [97294]
+2023-12-18 16:37:49.325 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:37:49.335 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM org_types;
+2023-12-18 16:37:49.336 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59885 - "GET /org_types HTTP/1.1" 200
+2023-12-18 16:38:02.837 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-18 16:38:02.841 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59893 - "GET /role_types HTTP/1.1" 200
+2023-12-18 16:38:36.915 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:38:37.017 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:38:37.017 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:38:37.017 | INFO     | uvicorn.server:serve:86 - Finished server process [97485]
+2023-12-18 16:38:37.387 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:38:43.982 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM bank_types;
+2023-12-18 16:38:43.985 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59904 - "GET /bank_types HTTP/1.1" 200
+2023-12-18 16:38:47.441 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:38:47.542 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:38:47.543 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:38:47.544 | INFO     | uvicorn.server:serve:86 - Finished server process [97508]
+2023-12-18 16:38:47.931 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:40:10.226 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:40:10.328 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:40:10.328 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:40:10.329 | INFO     | uvicorn.server:serve:86 - Finished server process [97519]
+2023-12-18 16:40:10.693 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:40:15.582 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM bank_types;
+2023-12-18 16:40:15.586 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59921 - "GET /bank_types HTTP/1.1" 200
+2023-12-18 16:40:23.905 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT orgs.* FROM orgs WHERE id = '<coroutine object DB.fetch_value at 0x102f6f0c0>'
+        union
+        SELECT child.* FROM orgs as child INNER JOIN parents ON parents.id = child.p_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-18 16:40:23.909 | ERROR    | app.endpoints.master:bank_types:69 - invalid input syntax for type uuid: "<coroutine object DB.fetch_value at 0x102f6f0c0>"Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 4
+               │     └ 7
+               └ <function _main at 0x100b5d9d0>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 4
+           │    └ <function BaseProcess._bootstrap at 0x1008db430>
+           └ <SpawnProcess name='SpawnProcess-32' parent=96543 started>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x1008cfa60>
+    └ <SpawnProcess name='SpawnProcess-32' parent=96543 started>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x100b47f70>, 'target': <bound method Server.run of <uvicorn.server.Server object...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-32' parent=96543 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-32' parent=96543 started>
+    │    └ <function subprocess_started at 0x102e251f0>
+    └ <SpawnProcess name='SpawnProcess-32' parent=96543 started>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x100b47f40>>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/server.py", line 61, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ [<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 8000)>]
+           │       │   │    └ <function Server.serve at 0x102e0b790>
+           │       │   └ <uvicorn.server.Server object at 0x100b47f40>
+           │       └ <function run at 0x100b9b790>
+           └ <module 'asyncio' from '/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/async...
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x102e12140>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x102e5bcd0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x102f5c8b0>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x102f5c8...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x102f43fa0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x102e5bcd0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/applications.py", line 1106, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x102f5c8b0>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x102f5c8...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x102f5c8b0>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x102f5c8...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x102f3c910>
+          └ <fastapi.applications.FastAPI object at 0x102f43fa0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x102b7e4c0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x102f5c8...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x102f3c970>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x102f3c910>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x102b7e4c0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x102f5c8...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x102f3c9a0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x102f3c970>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x102f44700>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x102f5c8...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x102f3ca00>
+          └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x102f3c9a0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x102f44700>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x102f5c8...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x102f43c70>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x102f3ca00>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x102f44700>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x102f5c8...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function Route.handle at 0x1026ef940>
+          └ APIRoute(path='/test', name='bank_types', methods=['GET'])
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x102f44700>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x102f5c8...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function request_response.<locals>.app at 0x102f44160>
+          └ APIRoute(path='/test', name='bank_types', methods=['GET'])
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+                     │    └ <starlette.requests.Request object at 0x102f5c700>
+                     └ <function get_request_handler.<locals>.app at 0x102f440d0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x1026ce5e0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'db': <providers.psql_provider.DB object at 0x102b830a0>}
+                 │         └ <function bank_types at 0x102bad040>
+                 └ <fastapi.dependencies.models.Dependant object at 0x102f3c7f0>
+
+> File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/endpoints/master.py", line 66, in bank_types
+    content=await common.query_access_orgs(db, "69a2f477-ce95-47ec-bf7f-ad0a51d12db4")
+                  │      │                 └ <providers.psql_provider.DB object at 0x102b830a0>
+                  │      └ <function query_access_orgs at 0x102ba9940>
+                  └ <module 'app.crud.common' from '/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/crud/common.py'>
+
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/crud/common.py", line 18, in query_access_orgs
+    return await db.fetch_all(sql)
+                 │  │         └ "\n    WITH RECURSIVE parents AS (\n        SELECT orgs.* FROM orgs WHERE id = '<coroutine object DB.fetch_value at 0x102f6f0...
+                 │  └ <function DB.fetch_all at 0x102b948b0>
+                 └ <providers.psql_provider.DB object at 0x102b830a0>
+
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/providers/psql_provider.py", line 40, in fetch_all
+    result = await con.fetch(query)
+                   │   │     └ "\n    WITH RECURSIVE parents AS (\n        SELECT orgs.* FROM orgs WHERE id = '<coroutine object DB.fetch_value at 0x102f6f0...
+                   │   └ <function Connection.fetch at 0x1028f0ee0>
+                   └ <PoolConnectionProxy [released] 0x102f5cc10>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 691, in fetch
+    return await self._execute(
+                 │    └ <function Connection._execute at 0x1028e6040>
+                 └ <asyncpg.connection.Connection object at 0x102efee50>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1794, in _execute
+    result, _ = await self.__execute(
+                      └ <asyncpg.connection.Connection object at 0x102efee50>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1892, in __execute
+    result, stmt = await self._do_execute(
+                         │    └ <function Connection._do_execute at 0x1028e6430>
+                         └ <asyncpg.connection.Connection object at 0x102efee50>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1933, in _do_execute
+    stmt = await self._get_statement(
+                 │    └ <function Connection._get_statement at 0x1028e3550>
+                 └ <asyncpg.connection.Connection object at 0x102efee50>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 433, in _get_statement
+    statement = await self._protocol.prepare(
+                      │    └ <member '_protocol' of 'Connection' objects>
+                      └ <asyncpg.connection.Connection object at 0x102efee50>
+  File "asyncpg/protocol/protocol.pyx", line 166, in prepare
+    return await waiter
+
+asyncpg.exceptions.InvalidTextRepresentationError: invalid input syntax for type uuid: "<coroutine object DB.fetch_value at 0x102f6f0c0>"
+
+2023-12-18 16:40:23.935 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59925 - "GET /test HTTP/1.1" 500
+2023-12-18 16:40:45.735 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:40:45.837 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:40:45.837 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:40:45.838 | INFO     | uvicorn.server:serve:86 - Finished server process [97545]
+2023-12-18 16:40:46.215 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:40:48.421 | INFO     | providers.psql_provider:fetch_value:48 - SELECT org_id FROM roles WHERE roles.id = '69a2f477-ce95-47ec-bf7f-ad0a51d12db4';
+2023-12-18 16:40:48.425 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT orgs.* FROM orgs WHERE id = 'None'
+        union
+        SELECT child.* FROM orgs as child INNER JOIN parents ON parents.id = child.p_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-18 16:40:48.427 | ERROR    | app.endpoints.master:bank_types:69 - invalid input syntax for type uuid: "None"Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 4
+               │     └ 7
+               └ <function _main at 0x1051919d0>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 4
+           │    └ <function BaseProcess._bootstrap at 0x104f0f430>
+           └ <SpawnProcess name='SpawnProcess-33' parent=96543 started>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x104f03a60>
+    └ <SpawnProcess name='SpawnProcess-33' parent=96543 started>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x10517bf70>, 'target': <bound method Server.run of <uvicorn.server.Server object...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-33' parent=96543 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-33' parent=96543 started>
+    │    └ <function subprocess_started at 0x1074591f0>
+    └ <SpawnProcess name='SpawnProcess-33' parent=96543 started>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x10517bf40>>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/server.py", line 61, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ [<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 8000)>]
+           │       │   │    └ <function Server.serve at 0x10743e790>
+           │       │   └ <uvicorn.server.Server object at 0x10517bf40>
+           │       └ <function run at 0x1051cf790>
+           └ <module 'asyncio' from '/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/async...
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x107446140>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x10748fcd0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1075906a0>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1075906...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x107576fa0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x10748fcd0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/applications.py", line 1106, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1075906a0>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1075906...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1075906a0>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1075906...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x107570910>
+          └ <fastapi.applications.FastAPI object at 0x107576fa0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x1071b24c0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1075906...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x107570970>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x107570910>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x1071b24c0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1075906...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x1075709a0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x107570970>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x1075775e0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1075906...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x107570a00>
+          └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x1075709a0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x1075775e0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1075906...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x107576c70>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x107570a00>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x1075775e0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1075906...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function Route.handle at 0x106d23940>
+          └ APIRoute(path='/test', name='bank_types', methods=['GET'])
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x1075775e0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1075906...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function request_response.<locals>.app at 0x107577160>
+          └ APIRoute(path='/test', name='bank_types', methods=['GET'])
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+                     │    └ <starlette.requests.Request object at 0x107590610>
+                     └ <function get_request_handler.<locals>.app at 0x1075770d0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x106d025e0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'db': <providers.psql_provider.DB object at 0x1071b70a0>}
+                 │         └ <function bank_types at 0x1071e1040>
+                 └ <fastapi.dependencies.models.Dependant object at 0x1075707f0>
+
+> File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/endpoints/master.py", line 66, in bank_types
+    content=await common.query_access_orgs(db, "69a2f477-ce95-47ec-bf7f-ad0a51d12db4")
+                  │      │                 └ <providers.psql_provider.DB object at 0x1071b70a0>
+                  │      └ <function query_access_orgs at 0x1071dd940>
+                  └ <module 'app.crud.common' from '/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/crud/common.py'>
+
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/crud/common.py", line 18, in query_access_orgs
+    return await db.fetch_all(sql)
+                 │  │         └ "\n    WITH RECURSIVE parents AS (\n        SELECT orgs.* FROM orgs WHERE id = 'None'\n        union\n        SELECT child.* ...
+                 │  └ <function DB.fetch_all at 0x1071c88b0>
+                 └ <providers.psql_provider.DB object at 0x1071b70a0>
+
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/providers/psql_provider.py", line 40, in fetch_all
+    result = await con.fetch(query)
+                   │   │     └ "\n    WITH RECURSIVE parents AS (\n        SELECT orgs.* FROM orgs WHERE id = 'None'\n        union\n        SELECT child.* ...
+                   │   └ <function Connection.fetch at 0x106f25ee0>
+                   └ <PoolConnectionProxy [released] 0x107590be0>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 691, in fetch
+    return await self._execute(
+                 │    └ <function Connection._execute at 0x106f1a040>
+                 └ <asyncpg.connection.Connection object at 0x107532d60>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1794, in _execute
+    result, _ = await self.__execute(
+                      └ <asyncpg.connection.Connection object at 0x107532d60>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1892, in __execute
+    result, stmt = await self._do_execute(
+                         │    └ <function Connection._do_execute at 0x106f1a430>
+                         └ <asyncpg.connection.Connection object at 0x107532d60>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1933, in _do_execute
+    stmt = await self._get_statement(
+                 │    └ <function Connection._get_statement at 0x106f17550>
+                 └ <asyncpg.connection.Connection object at 0x107532d60>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 433, in _get_statement
+    statement = await self._protocol.prepare(
+                      │    └ <member '_protocol' of 'Connection' objects>
+                      └ <asyncpg.connection.Connection object at 0x107532d60>
+  File "asyncpg/protocol/protocol.pyx", line 166, in prepare
+    return await waiter
+
+asyncpg.exceptions.InvalidTextRepresentationError: invalid input syntax for type uuid: "None"
+
+2023-12-18 16:40:48.458 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59932 - "GET /test HTTP/1.1" 500
+2023-12-18 16:42:12.044 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:42:12.146 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:42:12.146 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:42:12.147 | INFO     | uvicorn.server:serve:86 - Finished server process [97566]
+2023-12-18 16:42:12.540 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:42:17.493 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT orgs.* FROM orgs WHERE id = '69a2f477-ce95-47ec-bf7f-ad0a51d12db4'
+        union
+        SELECT child.* FROM orgs as child INNER JOIN parents ON parents.id = child.p_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-18 16:42:17.496 | ERROR    | app.endpoints.master:bank_types:69 - column child.p_id does not exist
+HINT:  Perhaps you meant to reference the column "child.id".Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 4
+               │     └ 7
+               └ <function _main at 0x100c159d0>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 4
+           │    └ <function BaseProcess._bootstrap at 0x100993430>
+           └ <SpawnProcess name='SpawnProcess-34' parent=96543 started>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x100987a60>
+    └ <SpawnProcess name='SpawnProcess-34' parent=96543 started>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x100bfff70>, 'target': <bound method Server.run of <uvicorn.server.Server object...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-34' parent=96543 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-34' parent=96543 started>
+    │    └ <function subprocess_started at 0x102ede1f0>
+    └ <SpawnProcess name='SpawnProcess-34' parent=96543 started>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x100bfff40>>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/server.py", line 61, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ [<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 8000)>]
+           │       │   │    └ <function Server.serve at 0x102ec3790>
+           │       │   └ <uvicorn.server.Server object at 0x100bfff40>
+           │       └ <function run at 0x100c53790>
+           └ <module 'asyncio' from '/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/async...
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x102ecb140>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x102f13d00>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1030136d0>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1030136...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x102ffbfd0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x102f13d00>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/applications.py", line 1106, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1030136d0>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1030136...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1030136d0>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1030136...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x102ff3910>
+          └ <fastapi.applications.FastAPI object at 0x102ffbfd0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x102c364c0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1030136...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x102ff3970>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x102ff3910>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x102c364c0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1030136...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x102ff39a0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x102ff3970>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x102ffc5e0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1030136...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x102ff3a00>
+          └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x102ff39a0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x102ffc5e0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1030136...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x102ffbc70>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x102ff3a00>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x102ffc5e0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1030136...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function Route.handle at 0x1027a7940>
+          └ APIRoute(path='/test', name='bank_types', methods=['GET'])
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x102ffc5e0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1030136...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function request_response.<locals>.app at 0x102ffc160>
+          └ APIRoute(path='/test', name='bank_types', methods=['GET'])
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+                     │    └ <starlette.requests.Request object at 0x103013640>
+                     └ <function get_request_handler.<locals>.app at 0x102ffc0d0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x1027865e0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'db': <providers.psql_provider.DB object at 0x102c3b0a0>}
+                 │         └ <function bank_types at 0x102c65040>
+                 └ <fastapi.dependencies.models.Dependant object at 0x102ff3820>
+
+> File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/endpoints/master.py", line 66, in bank_types
+    content=await common.query_access_orgs(db, "69a2f477-ce95-47ec-bf7f-ad0a51d12db4")
+                  │      │                 └ <providers.psql_provider.DB object at 0x102c3b0a0>
+                  │      └ <function query_access_orgs at 0x102c61940>
+                  └ <module 'app.crud.common' from '/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/crud/common.py'>
+
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/crud/common.py", line 18, in query_access_orgs
+    return await db.fetch_all(sql)
+                 │  │         └ "\n    WITH RECURSIVE parents AS (\n        SELECT orgs.* FROM orgs WHERE id = '69a2f477-ce95-47ec-bf7f-ad0a51d12db4'\n      ...
+                 │  └ <function DB.fetch_all at 0x102c4c8b0>
+                 └ <providers.psql_provider.DB object at 0x102c3b0a0>
+
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/providers/psql_provider.py", line 40, in fetch_all
+    result = await con.fetch(query)
+                   │   │     └ "\n    WITH RECURSIVE parents AS (\n        SELECT orgs.* FROM orgs WHERE id = '69a2f477-ce95-47ec-bf7f-ad0a51d12db4'\n      ...
+                   │   └ <function Connection.fetch at 0x1029a8ee0>
+                   └ <PoolConnectionProxy [released] 0x1030139a0>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 691, in fetch
+    return await self._execute(
+                 │    └ <function Connection._execute at 0x10299e040>
+                 └ <asyncpg.connection.Connection object at 0x102fb6d60>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1794, in _execute
+    result, _ = await self.__execute(
+                      └ <asyncpg.connection.Connection object at 0x102fb6d60>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1892, in __execute
+    result, stmt = await self._do_execute(
+                         │    └ <function Connection._do_execute at 0x10299e430>
+                         └ <asyncpg.connection.Connection object at 0x102fb6d60>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1933, in _do_execute
+    stmt = await self._get_statement(
+                 │    └ <function Connection._get_statement at 0x10299b550>
+                 └ <asyncpg.connection.Connection object at 0x102fb6d60>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 433, in _get_statement
+    statement = await self._protocol.prepare(
+                      │    └ <member '_protocol' of 'Connection' objects>
+                      └ <asyncpg.connection.Connection object at 0x102fb6d60>
+  File "asyncpg/protocol/protocol.pyx", line 166, in prepare
+    return await waiter
+
+asyncpg.exceptions.UndefinedColumnError: column child.p_id does not exist
+HINT:  Perhaps you meant to reference the column "child.id".
+
+2023-12-18 16:42:17.521 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59937 - "GET /test HTTP/1.1" 500
+2023-12-18 16:42:48.091 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:42:48.193 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:42:48.194 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:42:48.194 | INFO     | uvicorn.server:serve:86 - Finished server process [97589]
+2023-12-18 16:42:48.569 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:42:55.057 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT orgs.* FROM orgs WHERE id = '69a2f477-ce95-47ec-bf7f-ad0a51d12db4'
+        union
+        SELECT child.* FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-18 16:42:55.062 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59945 - "GET /test HTTP/1.1" 200
+2023-12-18 16:43:45.461 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:43:45.563 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:43:45.563 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:43:45.564 | INFO     | uvicorn.server:serve:86 - Finished server process [97617]
+2023-12-18 16:43:45.936 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:43:54.538 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:43:54.641 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:43:54.643 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:43:54.643 | INFO     | uvicorn.server:serve:86 - Finished server process [97641]
+2023-12-18 16:43:55.021 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:44:17.118 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:44:17.220 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:44:17.222 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:44:17.222 | INFO     | uvicorn.server:serve:86 - Finished server process [97653]
+2023-12-18 16:44:17.610 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:45:38.824 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:45:38.926 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:45:38.926 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:45:38.927 | INFO     | uvicorn.server:serve:86 - Finished server process [97661]
+2023-12-18 16:45:39.333 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:45:41.575 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT orgs.* FROM orgs WHERE id = '3d365710-ec57-4b43-b861-7c811dc3f076'
+        union
+        SELECT child.* FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-18 16:45:41.579 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59977 - "GET /test HTTP/1.1" 200
+2023-12-18 16:45:54.052 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:45:54.153 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:45:54.154 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:45:54.154 | INFO     | uvicorn.server:serve:86 - Finished server process [97684]
+2023-12-18 16:45:54.533 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:45:56.054 | INFO     | providers.psql_provider:fetch_all:39 - 
+    WITH RECURSIVE parents AS (
+        SELECT orgs.* FROM orgs WHERE id = '30be4968-c0a5-41d1-8d94-b8aa18e46dc3'
+        union
+        SELECT child.* FROM orgs as child INNER JOIN parents ON parents.id = child.parent_id
+    )
+    SELECT parents.* FROM parents;
+    
+2023-12-18 16:45:56.057 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:59984 - "GET /test HTTP/1.1" 200
+2023-12-18 16:51:19.108 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:51:19.210 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:51:19.210 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:51:19.210 | INFO     | uvicorn.server:serve:86 - Finished server process [97699]
+2023-12-18 16:51:19.612 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:53:39.199 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:53:39.300 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:53:39.300 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:53:39.301 | INFO     | uvicorn.server:serve:86 - Finished server process [97778]
+2023-12-18 16:53:39.694 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:55:57.394 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:55:57.495 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:55:57.496 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:55:57.496 | INFO     | uvicorn.server:serve:86 - Finished server process [97814]
+2023-12-18 16:55:57.869 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:56:54.516 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:56:54.618 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:56:54.619 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:56:54.620 | INFO     | uvicorn.server:serve:86 - Finished server process [97849]
+2023-12-18 16:56:55.007 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:58:45.119 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:58:45.221 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:58:45.221 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:58:45.221 | INFO     | uvicorn.server:serve:86 - Finished server process [97868]
+2023-12-18 16:58:45.625 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:58:47.853 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:58:47.955 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:58:47.956 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:58:47.956 | INFO     | uvicorn.server:serve:86 - Finished server process [97901]
+2023-12-18 16:58:48.339 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 16:59:36.111 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 16:59:36.213 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 16:59:36.214 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 16:59:36.215 | INFO     | uvicorn.server:serve:86 - Finished server process [97908]
+2023-12-18 16:59:36.615 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:04:21.535 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM role_types;
+2023-12-18 17:04:21.538 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60085 - "GET /role_types HTTP/1.1" 200
+2023-12-18 17:04:34.175 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:04:34.276 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:04:34.277 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:04:34.277 | INFO     | uvicorn.server:serve:86 - Finished server process [97925]
+2023-12-18 17:04:34.699 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:04:38.440 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:04:38.542 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:04:38.542 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:04:38.543 | INFO     | uvicorn.server:serve:86 - Finished server process [98003]
+2023-12-18 17:04:38.941 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:05:52.045 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:05:52.146 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:05:52.147 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:05:52.147 | INFO     | uvicorn.server:serve:86 - Finished server process [98012]
+2023-12-18 17:05:52.508 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:06:07.076 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:06:07.178 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:06:07.178 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:06:07.178 | INFO     | uvicorn.server:serve:86 - Finished server process [98037]
+2023-12-18 17:06:07.570 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:06:23.351 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:06:23.453 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:06:23.454 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:06:23.454 | INFO     | uvicorn.server:serve:86 - Finished server process [98049]
+2023-12-18 17:06:23.852 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:06:25.669 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:06:25.772 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:06:25.773 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:06:25.774 | INFO     | uvicorn.server:serve:86 - Finished server process [98058]
+2023-12-18 17:06:26.176 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:06:34.675 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:06:34.777 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:06:34.778 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:06:34.778 | INFO     | uvicorn.server:serve:86 - Finished server process [98063]
+2023-12-18 17:06:35.146 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:08:56.413 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:08:56.515 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:08:56.515 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:08:56.515 | INFO     | uvicorn.server:serve:86 - Finished server process [98070]
+2023-12-18 17:08:56.923 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:09:30.936 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:09:31.037 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:09:31.038 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:09:31.038 | INFO     | uvicorn.server:serve:86 - Finished server process [98100]
+2023-12-18 17:09:31.447 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:09:52.387 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:09:52.489 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:09:52.491 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:09:52.492 | INFO     | uvicorn.server:serve:86 - Finished server process [98117]
+2023-12-18 17:09:52.872 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:14:05.661 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:14:05.762 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:14:05.763 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:14:05.763 | INFO     | uvicorn.server:serve:86 - Finished server process [98127]
+2023-12-18 17:14:06.158 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:14:32.158 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:14:32.261 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:14:32.263 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:14:32.264 | INFO     | uvicorn.server:serve:86 - Finished server process [98182]
+2023-12-18 17:14:32.657 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:16:16.516 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:16:16.619 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:16:16.622 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:16:16.623 | INFO     | uvicorn.server:serve:86 - Finished server process [98197]
+2023-12-18 17:16:16.999 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:16:58.393 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:16:58.495 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:16:58.495 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:16:58.496 | INFO     | uvicorn.server:serve:86 - Finished server process [98221]
+2023-12-18 17:16:58.871 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:17:28.022 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:17:28.124 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:17:28.126 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:17:28.127 | INFO     | uvicorn.server:serve:86 - Finished server process [98236]
+2023-12-18 17:17:28.504 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:18:06.044 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:18:06.147 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:18:06.149 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:18:06.149 | INFO     | uvicorn.server:serve:86 - Finished server process [98247]
+2023-12-18 17:18:06.535 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:18:18.671 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:18:18.773 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:18:18.777 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:18:18.777 | INFO     | uvicorn.server:serve:86 - Finished server process [98261]
+2023-12-18 17:18:19.157 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:18:28.469 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:18:28.571 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:18:28.572 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:18:28.572 | INFO     | uvicorn.server:serve:86 - Finished server process [98271]
+2023-12-18 17:18:28.938 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 17:21:37.666 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 17:21:37.768 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 17:21:37.769 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 17:21:37.769 | INFO     | uvicorn.server:serve:86 - Finished server process [98279]
+2023-12-18 17:21:38.146 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 18:52:36.780 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 18:52:36.884 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 18:52:36.886 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 18:52:36.887 | INFO     | uvicorn.server:serve:86 - Finished server process [98330]
+2023-12-18 18:52:37.347 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 19:04:06.193 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 19:04:06.294 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 19:04:06.295 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 19:04:06.295 | INFO     | uvicorn.server:serve:86 - Finished server process [99933]
+2023-12-18 19:04:06.695 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 19:05:28.664 | INFO     | providers.psql_provider:fetch_one:30 - 
+    SELECT
+        id,
+        email,
+        password,
+        curr_role_id
+    FROM
+        users
+    WHERE
+        users.email = '001@demo.com';
+    
+2023-12-18 19:05:28.666 | ERROR    | app.endpoints.auth:auth_for_token:36 - column "password" does not existTraceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 4
+               │     └ 7
+               └ <function _main at 0x102ec19d0>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 4
+           │    └ <function BaseProcess._bootstrap at 0x102c3f430>
+           └ <SpawnProcess name='SpawnProcess-68' parent=96543 started>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x102c33a60>
+    └ <SpawnProcess name='SpawnProcess-68' parent=96543 started>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x102e9db20>, 'target': <bound method Server.run of <uvicorn.server.Server object...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-68' parent=96543 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-68' parent=96543 started>
+    │    └ <function subprocess_started at 0x106a0e040>
+    └ <SpawnProcess name='SpawnProcess-68' parent=96543 started>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x102e9df70>>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/server.py", line 61, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ [<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 8000)>]
+           │       │   │    └ <function Server.serve at 0x1068cc5e0>
+           │       │   └ <uvicorn.server.Server object at 0x102e9df70>
+           │       └ <function run at 0x102eff790>
+           └ <module 'asyncio' from '/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/async...
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x106862ec0>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x106a47be0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b347c0>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b347...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x106b28a00>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x106a47be0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/applications.py", line 1106, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b347c0>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b347...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b347c0>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b347...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x106b34550>
+          └ <fastapi.applications.FastAPI object at 0x106b28a00>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x106b23b80>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b347...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x106b344f0>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x106b34550>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x106b23b80>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b347...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x106b344c0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x106b344f0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x106b23d30>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b347...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x106b34460>
+          └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x106b344c0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x106b23d30>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b347...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x106b28b20>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x106b34460>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x106b23d30>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b347...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function Route.handle at 0x10600f940>
+          └ APIRoute(path='/token', name='auth_for_token', methods=['POST'])
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x106b23d30>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b347...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function request_response.<locals>.app at 0x106b2d1f0>
+          └ APIRoute(path='/token', name='auth_for_token', methods=['POST'])
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+                     │    └ <starlette.requests.Request object at 0x106b34af0>
+                     └ <function get_request_handler.<locals>.app at 0x106b2d160>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x105eee5e0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'db': <providers.psql_provider.DB object at 0x106a0df10>, 'auth_user': {'email': '001@demo.com', 'password': '12345678'}}
+                 │         └ <function auth_for_token at 0x1067b50d0>
+                 └ <fastapi.dependencies.models.Dependant object at 0x106b28eb0>
+
+> File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/endpoints/auth.py", line 18, in auth_for_token
+    db_user = await auth_crud.query_user_for_auth(db, auth_user["email"])
+                    │         │                   │   └ {'email': '001@demo.com', 'password': '12345678'}
+                    │         │                   └ <providers.psql_provider.DB object at 0x106a0df10>
+                    │         └ <function query_user_for_auth at 0x1064cc280>
+                    └ <module 'app.crud.auth_crud' from '/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/crud/auth_crud.py'>
+
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/crud/auth_crud.py", line 16, in query_user_for_auth
+    return await db.fetch_one(sql)
+                 │  │         └ "\n    SELECT\n        id,\n        email,\n        password,\n        curr_role_id\n    FROM\n        users\n    WHERE\n    ...
+                 │  └ <function DB.fetch_one at 0x1064b5940>
+                 └ <providers.psql_provider.DB object at 0x106a0df10>
+
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/providers/psql_provider.py", line 31, in fetch_one
+    result = await con.fetchrow(query)
+                   │   │        └ "\n    SELECT\n        id,\n        email,\n        password,\n        curr_role_id\n    FROM\n        users\n    WHERE\n    ...
+                   │   └ <function Connection.fetchrow at 0x106210f70>
+                   └ <PoolConnectionProxy [released] 0x106b34df0>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 749, in fetchrow
+    data = await self._execute(
+                 │    └ <function Connection._execute at 0x106206040>
+                 └ <asyncpg.connection.Connection object at 0x106b3e5e0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1794, in _execute
+    result, _ = await self.__execute(
+                      └ <asyncpg.connection.Connection object at 0x106b3e5e0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1892, in __execute
+    result, stmt = await self._do_execute(
+                         │    └ <function Connection._do_execute at 0x106206430>
+                         └ <asyncpg.connection.Connection object at 0x106b3e5e0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1933, in _do_execute
+    stmt = await self._get_statement(
+                 │    └ <function Connection._get_statement at 0x106203550>
+                 └ <asyncpg.connection.Connection object at 0x106b3e5e0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 433, in _get_statement
+    statement = await self._protocol.prepare(
+                      │    └ <member '_protocol' of 'Connection' objects>
+                      └ <asyncpg.connection.Connection object at 0x106b3e5e0>
+  File "asyncpg/protocol/protocol.pyx", line 166, in prepare
+    return await waiter
+
+asyncpg.exceptions.UndefinedColumnError: column "password" does not exist
+
+2023-12-18 19:05:28.694 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60711 - "POST /token HTTP/1.1" 500
+2023-12-18 19:06:03.137 | INFO     | providers.psql_provider:fetch_one:30 - 
+    SELECT
+        id,
+        email,
+        password,
+        curr_role_id
+    FROM
+        users
+    WHERE
+        users.email = '001@demo.com';
+    
+2023-12-18 19:06:03.140 | ERROR    | app.endpoints.auth:auth_for_token:36 - column "curr_role_id" does not existTraceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 4
+               │     └ 7
+               └ <function _main at 0x102ec19d0>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 4
+           │    └ <function BaseProcess._bootstrap at 0x102c3f430>
+           └ <SpawnProcess name='SpawnProcess-68' parent=96543 started>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x102c33a60>
+    └ <SpawnProcess name='SpawnProcess-68' parent=96543 started>
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x102e9db20>, 'target': <bound method Server.run of <uvicorn.server.Server object...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-68' parent=96543 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-68' parent=96543 started>
+    │    └ <function subprocess_started at 0x106a0e040>
+    └ <SpawnProcess name='SpawnProcess-68' parent=96543 started>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x102e9df70>>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/server.py", line 61, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ [<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 8000)>]
+           │       │   │    └ <function Server.serve at 0x1068cc5e0>
+           │       │   └ <uvicorn.server.Server object at 0x102e9df70>
+           │       └ <function run at 0x102eff790>
+           └ <module 'asyncio' from '/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/async...
+
+  File "/opt/homebrew/Cellar/python@3.9/3.9.18_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x106862ec0>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x106a47be0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b348e0>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b348...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x106b28a00>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x106a47be0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/applications.py", line 1106, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b348e0>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b348...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b348e0>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b348...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x106b34550>
+          └ <fastapi.applications.FastAPI object at 0x106b28a00>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x106c573a0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b348...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x106b344f0>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x106b34550>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x106c573a0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b348...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x106b344c0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x106b344f0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x106c57310>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b348...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x106b34460>
+          └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x106b344c0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x106c57310>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b348...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x106b28b20>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x106b34460>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x106c57310>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b348...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function Route.handle at 0x10600f940>
+          └ APIRoute(path='/token', name='auth_for_token', methods=['POST'])
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ExceptionMiddleware.__call__.<locals>.sender at 0x106c57310>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x106b348...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function request_response.<locals>.app at 0x106b2d1f0>
+          └ APIRoute(path='/token', name='auth_for_token', methods=['POST'])
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+                     │    └ <starlette.requests.Request object at 0x106b34d90>
+                     └ <function get_request_handler.<locals>.app at 0x106b2d160>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x105eee5e0>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'db': <providers.psql_provider.DB object at 0x106a0df10>, 'auth_user': {'email': '001@demo.com', 'password': '12345678'}}
+                 │         └ <function auth_for_token at 0x1067b50d0>
+                 └ <fastapi.dependencies.models.Dependant object at 0x106b28eb0>
+
+> File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/endpoints/auth.py", line 18, in auth_for_token
+    db_user = await auth_crud.query_user_for_auth(db, auth_user["email"])
+                    │         │                   │   └ {'email': '001@demo.com', 'password': '12345678'}
+                    │         │                   └ <providers.psql_provider.DB object at 0x106a0df10>
+                    │         └ <function query_user_for_auth at 0x1064cc280>
+                    └ <module 'app.crud.auth_crud' from '/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/crud/auth_crud.py'>
+
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/app/crud/auth_crud.py", line 16, in query_user_for_auth
+    return await db.fetch_one(sql)
+                 │  │         └ "\n    SELECT\n        id,\n        email,\n        password,\n        curr_role_id\n    FROM\n        users\n    WHERE\n    ...
+                 │  └ <function DB.fetch_one at 0x1064b5940>
+                 └ <providers.psql_provider.DB object at 0x106a0df10>
+
+  File "/Users/ryu/Desktop/loan-ledger-v4/loan-ledger-if-v4/providers/psql_provider.py", line 31, in fetch_one
+    result = await con.fetchrow(query)
+                   │   │        └ "\n    SELECT\n        id,\n        email,\n        password,\n        curr_role_id\n    FROM\n        users\n    WHERE\n    ...
+                   │   └ <function Connection.fetchrow at 0x106210f70>
+                   └ <PoolConnectionProxy [released] 0x106b34b50>
+
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 749, in fetchrow
+    data = await self._execute(
+                 │    └ <function Connection._execute at 0x106206040>
+                 └ <asyncpg.connection.Connection object at 0x106f49a90>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1794, in _execute
+    result, _ = await self.__execute(
+                      └ <asyncpg.connection.Connection object at 0x106f49a90>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1892, in __execute
+    result, stmt = await self._do_execute(
+                         │    └ <function Connection._do_execute at 0x106206430>
+                         └ <asyncpg.connection.Connection object at 0x106f49a90>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 1933, in _do_execute
+    stmt = await self._get_statement(
+                 │    └ <function Connection._get_statement at 0x106203550>
+                 └ <asyncpg.connection.Connection object at 0x106f49a90>
+  File "/Users/ryu/.local/share/virtualenvs/loan-ledger-if-v4-_WxevXHE/lib/python3.9/site-packages/asyncpg/connection.py", line 433, in _get_statement
+    statement = await self._protocol.prepare(
+                      │    └ <member '_protocol' of 'Connection' objects>
+                      └ <asyncpg.connection.Connection object at 0x106f49a90>
+  File "asyncpg/protocol/protocol.pyx", line 166, in prepare
+    return await waiter
+
+asyncpg.exceptions.UndefinedColumnError: column "curr_role_id" does not exist
+
+2023-12-18 19:06:03.158 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60714 - "POST /token HTTP/1.1" 500
+2023-12-18 19:06:35.058 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 19:06:35.159 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 19:06:35.160 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 19:06:35.160 | INFO     | uvicorn.server:serve:86 - Finished server process [165]
+2023-12-18 19:06:35.583 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 19:06:38.516 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 19:06:38.618 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 19:06:38.618 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 19:06:38.619 | INFO     | uvicorn.server:serve:86 - Finished server process [212]
+2023-12-18 19:06:39.024 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 19:06:41.679 | INFO     | providers.psql_provider:fetch_one:30 - 
+    SELECT
+        id,
+        email,
+        password,
+        defaut_role_id
+    FROM
+        users
+    WHERE
+        users.email = '001@demo.com';
+    
+2023-12-18 19:06:41.684 | INFO     | providers.psql_provider:fetch_one:30 - 
+    SELECT
+        id,
+        email,
+        name,
+        defaut_role_id
+    FROM
+        users
+    WHERE
+        users.id = '051260d6-5952-4a97-b37a-4630f09937f3';
+    
+2023-12-18 19:06:41.694 | INFO     | providers.psql_provider:fetch_one:30 - SELECT id FROM roles WHERE user_id = '051260d6-5952-4a97-b37a-4630f09937f3' ORDER BY type ASC;
+2023-12-18 19:06:41.703 | INFO     | providers.psql_provider:execute:57 - 
+    UPDATE users SET defaut_role_id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d' WHERE users.id = '051260d6-5952-4a97-b37a-4630f09937f3';
+    
+2023-12-18 19:06:41.717 | INFO     | providers.psql_provider:fetch_one:30 - 
+    SELECT
+        id,
+        email,
+        name,
+        defaut_role_id
+    FROM
+        users
+    WHERE
+        users.id = '051260d6-5952-4a97-b37a-4630f09937f3';
+    
+2023-12-18 19:06:41.721 | INFO     | providers.psql_provider:fetch_all:39 - 
+    SELECT
+        roles.id,
+        roles.type,
+        orgs.name
+    FROM
+        roles
+    JOIN
+        users
+        ON
+        users.id = roles.user_id
+    JOIN
+        orgs
+        ON
+        orgs.id = roles.org_id
+    WHERE
+        roles.user_id = '051260d6-5952-4a97-b37a-4630f09937f3';
+    
+2023-12-18 19:06:41.725 | INFO     | providers.psql_provider:fetch_all:39 - 
+    SELECT
+        code,
+        name
+    FROM
+        permissions
+    JOIN
+        role_permission_rels
+        ON
+        role_permission_rels.permission_code = permissions.code
+    JOIN
+        roles
+        ON
+        roles.id = role_permission_rels.role_id
+    WHERE
+        roles.id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d';
+    
+2023-12-18 19:06:41.728 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60724 - "POST /token HTTP/1.1" 200
+2023-12-18 19:12:23.790 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60961 - "OPTIONS /token HTTP/1.1" 200
+2023-12-18 19:12:23.804 | INFO     | providers.psql_provider:fetch_one:30 - 
+    SELECT
+        id,
+        email,
+        password,
+        defaut_role_id
+    FROM
+        users
+    WHERE
+        users.email = '001@demo.com';
+    
+2023-12-18 19:12:23.825 | INFO     | providers.psql_provider:fetch_one:30 - 
+    SELECT
+        id,
+        email,
+        name,
+        defaut_role_id
+    FROM
+        users
+    WHERE
+        users.id = '051260d6-5952-4a97-b37a-4630f09937f3';
+    
+2023-12-18 19:12:23.826 | INFO     | providers.psql_provider:fetch_one:30 - 
+    SELECT
+        id,
+        email,
+        name,
+        defaut_role_id
+    FROM
+        users
+    WHERE
+        users.id = '051260d6-5952-4a97-b37a-4630f09937f3';
+    
+2023-12-18 19:12:23.827 | INFO     | providers.psql_provider:fetch_all:39 - 
+    SELECT
+        roles.id,
+        roles.type,
+        orgs.name
+    FROM
+        roles
+    JOIN
+        users
+        ON
+        users.id = roles.user_id
+    JOIN
+        orgs
+        ON
+        orgs.id = roles.org_id
+    WHERE
+        roles.user_id = '051260d6-5952-4a97-b37a-4630f09937f3';
+    
+2023-12-18 19:12:23.829 | INFO     | providers.psql_provider:fetch_all:39 - 
+    SELECT
+        code,
+        name
+    FROM
+        permissions
+    JOIN
+        role_permission_rels
+        ON
+        role_permission_rels.permission_code = permissions.code
+    JOIN
+        roles
+        ON
+        roles.id = role_permission_rels.role_id
+    WHERE
+        roles.id = 'e2fa169b-f1d0-4564-b970-e6de28475a8d';
+    
+2023-12-18 19:12:23.835 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:60961 - "POST /token HTTP/1.1" 200
+2023-12-18 21:41:30.580 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 21:41:30.683 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 21:41:30.683 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 21:41:30.684 | INFO     | uvicorn.server:serve:86 - Finished server process [223]
+2023-12-18 21:41:31.261 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 21:42:52.869 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 21:42:52.971 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 21:42:52.971 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 21:42:52.972 | INFO     | uvicorn.server:serve:86 - Finished server process [3249]
+2023-12-18 21:42:53.375 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 21:43:15.048 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 21:43:15.149 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 21:43:15.149 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 21:43:15.150 | INFO     | uvicorn.server:serve:86 - Finished server process [3283]
+2023-12-18 21:43:15.563 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 21:43:20.021 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 21:43:20.123 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 21:43:20.123 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 21:43:20.123 | INFO     | uvicorn.server:serve:86 - Finished server process [3300]
+2023-12-18 21:43:20.534 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 21:44:21.455 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 21:44:21.557 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 21:44:21.557 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 21:44:21.558 | INFO     | uvicorn.server:serve:86 - Finished server process [3305]
+2023-12-18 21:44:21.937 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 21:44:37.112 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 21:44:37.214 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 21:44:37.215 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 21:44:37.215 | INFO     | uvicorn.server:serve:86 - Finished server process [3333]
+2023-12-18 21:44:37.604 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 22:24:52.380 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55047 - "OPTIONS /banks HTTP/1.1" 200
+2023-12-18 22:24:52.381 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55048 - "OPTIONS /banks HTTP/1.1" 200
+2023-12-18 22:24:52.383 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55048 - "GET /banks HTTP/1.1" 404
+2023-12-18 22:24:52.384 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55047 - "GET /banks HTTP/1.1" 404
+2023-12-18 22:26:03.292 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 22:26:03.394 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 22:26:03.395 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 22:26:03.395 | INFO     | uvicorn.server:serve:86 - Finished server process [3346]
+2023-12-18 22:26:03.882 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 22:26:14.082 | INFO     | providers.psql_provider:fetch_one:30 - SELECT * FROM users;
+2023-12-18 22:26:14.089 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55398 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:26:14.097 | INFO     | providers.psql_provider:fetch_one:30 - SELECT * FROM users;
+2023-12-18 22:26:14.100 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55398 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:27:00.124 | INFO     | providers.psql_provider:fetch_one:30 - SELECT * FROM users;
+2023-12-18 22:27:00.132 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55400 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:27:00.140 | INFO     | providers.psql_provider:fetch_one:30 - SELECT * FROM users;
+2023-12-18 22:27:00.144 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55603 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:28:27.053 | INFO     | providers.psql_provider:fetch_one:30 - SELECT * FROM users;
+2023-12-18 22:28:27.059 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55972 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:28:27.072 | INFO     | providers.psql_provider:fetch_one:30 - SELECT * FROM users;
+2023-12-18 22:28:27.076 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:55974 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:29:05.508 | INFO     | providers.psql_provider:fetch_one:30 - SELECT * FROM users;
+2023-12-18 22:29:05.515 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56140 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:29:05.522 | INFO     | providers.psql_provider:fetch_one:30 - SELECT * FROM users;
+2023-12-18 22:29:05.526 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56142 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:29:06.723 | INFO     | providers.psql_provider:fetch_one:30 - SELECT * FROM users;
+2023-12-18 22:29:06.727 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56142 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:29:06.734 | INFO     | providers.psql_provider:fetch_one:30 - SELECT * FROM users;
+2023-12-18 22:29:06.738 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56140 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:29:21.068 | INFO     | providers.psql_provider:fetch_one:30 - SELECT * FROM users;
+2023-12-18 22:29:21.074 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56224 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:29:21.084 | INFO     | providers.psql_provider:fetch_one:30 - SELECT * FROM users;
+2023-12-18 22:29:21.088 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56224 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:29:34.224 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-18 22:29:34.326 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-18 22:29:34.326 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-18 22:29:34.327 | INFO     | uvicorn.server:serve:86 - Finished server process [4184]
+2023-12-18 22:29:34.735 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2023-12-18 22:29:49.208 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM users;
+2023-12-18 22:29:49.214 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56353 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:29:49.225 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM users;
+2023-12-18 22:29:49.229 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:56353 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:37:04.503 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58130 - "OPTIONS /banks HTTP/1.1" 200
+2023-12-18 22:37:04.503 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58131 - "OPTIONS /banks HTTP/1.1" 200
+2023-12-18 22:37:04.509 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM users;
+2023-12-18 22:37:04.514 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58131 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:37:04.521 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM users;
+2023-12-18 22:37:04.523 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58130 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:37:15.376 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM users;
+2023-12-18 22:37:15.384 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58188 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:37:15.395 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM users;
+2023-12-18 22:37:15.398 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58190 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:37:51.508 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM users;
+2023-12-18 22:37:51.510 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58348 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:37:51.516 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM users;
+2023-12-18 22:37:51.518 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58350 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:38:47.378 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM users;
+2023-12-18 22:38:47.384 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58589 - "GET /banks HTTP/1.1" 200
+2023-12-18 22:38:47.398 | INFO     | providers.psql_provider:fetch_all:39 - SELECT * FROM users;
+2023-12-18 22:38:47.403 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 127.0.0.1:58591 - "GET /banks HTTP/1.1" 200
+2023-12-19 11:03:49.949 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2023-12-19 11:03:50.053 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2023-12-19 11:03:50.054 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2023-12-19 11:03:50.055 | INFO     | uvicorn.server:serve:86 - Finished server process [4285]
